@@ -11,7 +11,7 @@
 | simscape/scripts/ | 19 scripts MATLAB — construction incrementale du modele Simscape |
 | data/downloads/ | 13 sources de donnees publiques (PVGIS, ARERA, profils) |
 | data/plots/ | 5 graphiques de resultats (300 DPI) |
-| docs/ | Presentation (37 slides), Conformity Report, IO Standards, Research Proposal |
+| docs/ | Presentation (37 slides), Conformity Report, IO Standards, Research Proposal, Article source (PDF) |
 | autoresearch/ | Pipeline agent IA pour decouverte autonome d'EMS |
 | results/ | Resultats Case A vs B (CSV) |
 
@@ -36,5 +36,12 @@ sim('prattico_simscape_phase_b', 0.5)
 validate_phase_h       % 18/18 tests
 ```
 
+## Article de reference
+
+L'article source est inclus dans le depot : [`docs/Prattico_et_al_2025_Energies.pdf`](docs/Prattico_et_al_2025_Energies.pdf)
+
+> Prattico et al. (2025) "Enhancing Power Quality and Energy Cost Reduction in Hybrid AC/DC Microgrids Using a Fuzzy Logic-Based Energy Management System"
+> *Energies* MDPI, 18(22), 5985 — DOI: [10.3390/en18225985](https://doi.org/10.3390/en18225985) — Open Access
+
 ---
-*Reference : Prattico et al. (2025) DOI 10.3390/en18225985*
+*Oussama AKIR — Sup'Com, Universite de Carthage — Mars 2026*
