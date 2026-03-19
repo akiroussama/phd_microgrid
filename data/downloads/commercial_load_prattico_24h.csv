@@ -1,0 +1,25 @@
+Hour,P_kW,Q_kvar,PF,Description
+0,5,2.4,0.90,Night standby
+1,5,2.4,0.90,Night standby
+2,5,2.4,0.90,Night standby
+3,5,2.4,0.90,Night standby
+4,5,2.4,0.90,Night standby
+5,5,2.4,0.90,Night standby
+6,5,2.4,0.90,Night standby
+7,10,4.8,0.90,Early morning
+8,35,17.0,0.90,Business start
+9,35,17.0,0.90,Business hours
+10,35,17.0,0.90,Business hours
+11,35,17.0,0.90,Business hours
+12,45,21.8,0.90,Lunch peak
+13,40,19.4,0.90,Post-lunch
+14,35,17.0,0.90,Afternoon
+15,35,17.0,0.90,Afternoon
+16,35,17.0,0.90,Afternoon
+17,35,17.0,0.90,Late afternoon
+18,20,9.7,0.90,Evening transition
+19,15,7.3,0.90,Post-business
+20,10,4.8,0.90,Evening
+21,5,2.4,0.90,Night transition
+22,5,2.4,0.90,Night standby
+23,5,2.4,0.90,Night standby

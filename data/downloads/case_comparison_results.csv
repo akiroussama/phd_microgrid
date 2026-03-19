@@ -1,0 +1,8 @@
+Metric,Case_A,Case_B,Improvement,Paper_Target
+Vdc_mean_V,753.9,751.3,,
+DeltaV_max_pct,5.0,1.7,,+/-2%
+SOC_min_pct,0.0,30.0,,30%
+SOC_max_pct,100.0,90.0,,90%
+SOC_range_pct,100.0,60.0,,60%
+Self_consumption_pct,0.5,0.5,+0.0%,+16%
+Daily_cost_EUR,4311.31,4311.31,0.0%,-10-15%

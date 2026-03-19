@@ -1,0 +1,46 @@
+{
+  "modifiable_files": [
+    "simscape_opus_46/scripts/create_prattico_fis.m",
+    "simscape_opus_46/scripts/build_ems_fuzzy.m"
+  ],
+  "readonly_files": [
+    "simscape_opus_46/scripts/build_pv_system.m",
+    "simscape_opus_46/scripts/build_battery_system.m",
+    "simscape_opus_46/scripts/build_fc_system.m",
+    "simscape_opus_46/scripts/build_wt_system.m",
+    "simscape_opus_46/scripts/build_dc_load.m",
+    "simscape_opus_46/scripts/build_vsc_system.m",
+    "simscape_opus_46/scripts/build_fullday.m",
+    "simscape_opus_46/scripts/generate_profiles_prattico.m"
+  ],
+  "parameter_bounds": {
+    "SOC_min": [10, 40],
+    "SOC_max": [80, 95],
+    "DeltaP_DeficitHigh_peak": [-150, -80],
+    "DeltaP_DeficitLow_center": [-100, -20],
+    "DeltaP_Balanced_width": [10, 60],
+    "DeltaP_SurplusLow_center": [20, 100],
+    "DeltaP_SurplusHigh_peak": [80, 150],
+    "SOC_Low_upper": [35, 55],
+    "SOC_Medium_center": [40, 60],
+    "SOC_High_center": [60, 80],
+    "SOC_VeryHigh_lower": [70, 85],
+    "Tariff_Low_upper": [0.07, 0.10],
+    "Tariff_High_lower": [0.10, 0.13],
+    "Pref_batt_range": [50, 150],
+    "FC_SOC_threshold_mf": [1, 2]
+  },
+  "score_weights": {
+    "DeltaV_max": -10,
+    "SOC_in_range_pct": 5,
+    "daily_cost_eur": -2,
+    "self_consumption_pct": 3,
+    "safety_violations": -1000
+  },
+  "max_experiments": 500,
+  "timeout_seconds": 300,
+  "matlab_path": "matlab",
+  "matlab_batch_cmd": "run('D:/doctorat/workspace/these/simscape_opus_46/scripts/run_autoresearch_experiment.m')",
+  "results_csv": "autoresearch/logs/last_result.csv",
+  "project_root": "D:/doctorat/workspace/these"
+}

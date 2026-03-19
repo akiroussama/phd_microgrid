@@ -1,0 +1,22 @@
+SOC_pct,OCV_V_cell,OCV_V_pack_160s,Source
+0,2.50,400.0,CALCE LFP typical + Baronti2013
+5,3.00,480.0,CALCE LFP typical
+10,3.20,512.0,CALCE LFP typical (SOC_min paper Table5)
+15,3.24,518.4,interpolation
+20,3.27,523.2,CALCE LFP typical
+25,3.28,524.8,interpolation
+30,3.29,526.4,EMS SOC_min (paper text)
+35,3.30,528.0,interpolation
+40,3.31,529.6,CALCE LFP typical
+45,3.32,531.2,interpolation
+50,3.33,532.8,CALCE LFP typical (nominal)
+55,3.33,532.8,LFP flat plateau region
+60,3.33,532.8,LFP flat plateau region (SOC_init model)
+65,3.34,534.4,LFP flat plateau region
+70,3.34,534.4,CALCE LFP typical
+75,3.35,536.0,interpolation
+80,3.36,537.6,CALCE LFP typical
+85,3.38,540.8,interpolation
+90,3.40,544.0,EMS SOC_max (paper text)
+95,3.50,560.0,CALCE LFP typical
+100,3.60,576.0,CALCE LFP typical (fully charged)

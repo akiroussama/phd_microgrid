@@ -1,0 +1,17 @@
+I_stack_A,V_cell_V,V_stack_V,P_stack_W,Region,Source
+0,1.00,50.0,0,OCV,Nernst Eq.15 E0=1.0V x 50 cells
+5,0.95,47.5,238,Activation,V_act dominant
+10,0.92,46.0,460,Activation,V_act dominant
+20,0.88,44.0,880,Activation-Ohmic transition,OPEM typical PEMFC
+50,0.82,41.0,2050,Ohmic,Linear region V_ohm=I*R_int
+100,0.75,37.5,3750,Ohmic,R_int approx 0.5 mOhm/cell
+150,0.70,35.0,5250,Ohmic,Linear region
+200,0.65,32.5,6500,Ohmic,Linear region
+250,0.60,30.0,7500,Ohmic,Approaching rated
+300,0.56,28.0,8400,Ohmic,Near rated
+350,0.52,26.0,9100,Ohmic-Concentration,Approaching limits
+400,0.48,24.0,9600,Concentration,V_conc increasing (Eq.16)
+417,0.48,24.0,10000,Rated point,20kW at 48V/417A (paper spec)
+450,0.44,22.0,9900,Concentration,P drops (mass transport limit)
+500,0.38,19.0,9500,Concentration,Deep concentration losses
+550,0.30,15.0,8250,Shutdown,Below usable range
