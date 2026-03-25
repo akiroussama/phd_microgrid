@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproduction Simscape Prattico | 18 Mars 2026</title>
+    <title>Reproduction Simscape Prattico | 25 Mars 2026</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Outfit:wght@300;500;700;800&family=Fira+Code:wght@400;500;600&display=swap"
         rel="stylesheet">
@@ -1136,7 +1136,7 @@
             <div class="content-full text-center">
                 <h1 class="hero-title">Reproduction Simscape du Microgrid<br>Prattico et al. (2025)</h1>
                 <p class="hero-subtitle">
-                    Avancement &mdash; Réunion du 18 Mars 2026
+                    Avancement &mdash; Réunion du 25 Mars 2026
                 </p>
                 <div class="grid-4 mt-2">
                     <div class="metric-card">
@@ -1164,157 +1164,45 @@
 
         <!-- ==================== SLIDE 1: SOMMAIRE ==================== -->
         <div class="slide">
-            <div class="content-single">
+            <div class="content-full">
                 <div class="slide-header">
-                    <span class="section-badge">NAVIGATION</span>
+                    <span class="section-badge">PLAN</span>
                     <h2 class="slide-title">Sommaire</h2>
                 </div>
-                <div class="toc-layout">
-                    <!-- Group 1: Architecture et composants -->
-                    <div class="toc-group" style="--toc-accent: var(--accent-blue);" onclick="goToSlide(2)">
-                        <div class="toc-group-header">
-                            <div class="toc-group-title">Architecture et composants</div>
+                <div class="grid-2 mt-1" style="gap:1.5rem;">
+                    <div>
+                        <div class="card" style="border-left:4px solid var(--accent-blue); padding:1rem; margin-bottom:1rem;">
+                            <div class="card-title" style="font-size:1rem; color:var(--accent-blue);">1. Reproduction Simscape</div>
+                            <div class="card-text" style="font-size:0.8rem; line-height:1.7;">
+                                Comment on a reproduit le microgrid de Prattico et al. (2025) en Simscape :
+                                architecture hybride AC/DC, 7 composants, 106 tests automatisés,
+                                données publiques de Reggio Calabria.
+                            </div>
                         </div>
-                        <p class="toc-group-note">Rappel Meeting #6, bilan, architecture papier et implémentée,
-                            branches PV, Batterie, WT, FC, Charges et VSC.</p>
-                        <span class="toc-group-range">Slides 2&ndash;9</span>
-                        <div class="toc-list mt-1">
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(2)">
-                                <span class="toc-index">02</span>
-                                <span class="toc-text">Rappel Meeting #6</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(3)">
-                                <span class="toc-index">03</span>
-                                <span class="toc-text">Ce qui a été fait</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(4)">
-                                <span class="toc-index">04</span>
-                                <span class="toc-text">Architecture papier (Fig. 1)</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(5)">
-                                <span class="toc-index">05</span>
-                                <span class="toc-text">Architecture implémentée</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(6)">
-                                <span class="toc-index">06</span>
-                                <span class="toc-text">Branche PV</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(7)">
-                                <span class="toc-index">07</span>
-                                <span class="toc-text">Branche Batterie</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(8)">
-                                <span class="toc-index">08</span>
-                                <span class="toc-text">WT + FC (Average-Value)</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(9)">
-                                <span class="toc-index">09</span>
-                                <span class="toc-text">Charges + VSC</span>
+                        <div class="card" style="border-left:4px solid var(--accent-purple); padding:1rem;">
+                            <div class="card-title" style="font-size:1rem; color:var(--accent-purple);">2. EMS Fuzzy &amp; Résultats</div>
+                            <div class="card-text" style="font-size:0.8rem; line-height:1.7;">
+                                Le système de gestion d'énergie : 60 règles Mamdani sans toolbox,
+                                simulation 24h, comparaison Case A (sans EMS) vs Case B (avec EMS),
+                                conformité IEEE 1547 Cat II.
                             </div>
                         </div>
                     </div>
-                    <!-- Group 2: IEEE 1547 -->
-                    <div class="toc-group" style="--toc-accent: var(--accent-purple);" onclick="goToSlide(10)">
-                        <div class="toc-group-header">
-                            <div class="toc-group-title">IEEE 1547</div>
-                        </div>
-                        <p class="toc-group-note">Norme IEEE 1547, catégories I/II/III,
-                            justification Cat II, comparaison.</p>
-                        <span class="toc-group-range">Slides 10&ndash;15</span>
-                        <div class="toc-list mt-1">
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(10)">
-                                <span class="toc-index">10</span>
-                                <span class="toc-text">IEEE 1547 Overview</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(11)">
-                                <span class="toc-index">11</span>
-                                <span class="toc-text">IEEE 1547 Catégories</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(12)">
-                                <span class="toc-index">12</span>
-                                <span class="toc-text">Why Cat II for Prattico</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(13)">
-                                <span class="toc-index">13</span>
-                                <span class="toc-text">Catégorie II (Notre cas)</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(14)">
-                                <span class="toc-index">14</span>
-                                <span class="toc-text">Catégorie III</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(15)">
-                                <span class="toc-index">15</span>
-                                <span class="toc-text">Comparaison I vs II vs III</span>
+                    <div>
+                        <div class="card" style="border-left:4px solid var(--accent-orange); padding:1rem; margin-bottom:1rem;">
+                            <div class="card-title" style="font-size:1rem; color:var(--accent-orange);">3. AutoResearch &mdash; Direction</div>
+                            <div class="card-text" style="font-size:0.8rem; line-height:1.7;">
+                                Le concept : un agent IA qui explore automatiquement l'espace des
+                                configurations EMS. SOTA, gap identifié, comparaison avec Karpathy (2026),
+                                positionnement dans la thèse.
                             </div>
                         </div>
-                    </div>
-                    <!-- Group 3: EMS et Résultats -->
-                    <div class="toc-group" style="--toc-accent: var(--accent-green);" onclick="goToSlide(16)">
-                        <div class="toc-group-header">
-                            <div class="toc-group-title">EMS et Résultats</div>
-                        </div>
-                        <p class="toc-group-note">Architecture EMS Fuzzy, validation FIS, simulation 24h,
-                            courbes, analyses détaillées, démo live.</p>
-                        <span class="toc-group-range">Slides 16&ndash;23</span>
-                        <div class="toc-list mt-1">
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(16)">
-                                <span class="toc-index">16</span>
-                                <span class="toc-text">EMS Fuzzy Architecture</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(17)">
-                                <span class="toc-index">17</span>
-                                <span class="toc-text">Validation FIS 7/7 cas repr.</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(18)">
-                                <span class="toc-index">18</span>
-                                <span class="toc-text">Simulation 24h</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(19)">
-                                <span class="toc-index">19</span>
-                                <span class="toc-text">Courbes résultats</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(22)">
-                                <span class="toc-index">22</span>
-                                <span class="toc-text">Case A vs Case B</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(23)">
-                                <span class="toc-index">23</span>
-                                <span class="toc-text">Analyses détaillées (SOC, Power, Comparaison)</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Group 4: Données, Proposition et Conclusion -->
-                    <div class="toc-group" style="--toc-accent: var(--accent-orange);" onclick="goToSlide(24)">
-                        <div class="toc-group-header">
-                            <div class="toc-group-title">Données, Proposition et Conclusion</div>
-                        </div>
-                        <p class="toc-group-note">I/O et standards, données, roadmap, AutoResearch, état de l'art,
-                            limitations et conclusion.</p>
-                        <span class="toc-group-range">Slides 24&ndash;33</span>
-                        <div class="toc-list mt-1">
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(28)">
-                                <span class="toc-index">28</span>
-                                <span class="toc-text">I/O + Standards</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(29)">
-                                <span class="toc-index">29</span>
-                                <span class="toc-text">Données et provenance</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(32)">
-                                <span class="toc-index">32</span>
-                                <span class="toc-text">Roadmap thèse (4 couches)</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(33)">
-                                <span class="toc-index">33</span>
-                                <span class="toc-text">Direction AutoResearch</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(34)">
-                                <span class="toc-index">34</span>
-                                <span class="toc-text">État de l'art &mdash; EMS autonome</span>
-                            </div>
-                            <div class="toc-item" onclick="event.stopPropagation(); goToSlide(36)">
-                                <span class="toc-index">36</span>
-                                <span class="toc-text">Conclusion</span>
+                        <div class="card" style="border-left:4px solid var(--accent-green); padding:1rem;">
+                            <div class="card-title" style="font-size:1rem; color:var(--accent-green);">4. Premiers résultats &amp; Découverte</div>
+                            <div class="card-text" style="font-size:0.8rem; line-height:1.7;">
+                                40 expériences autonomes, 10 scénarios testés.
+                                <strong>Résultat : +32.7% vs Prattico</strong> (score 708.55 vs 533.98).
+                                Coût réduit de 99.7%. Zéro violation. Island Mode découvert par l'IA.
                             </div>
                         </div>
                     </div>
@@ -1384,7 +1272,8 @@
                     <div class="timeline-item">
                         <span class="timeline-badge done">IEEE</span>
                         <span class="timeline-text"><strong>IEEE 1547 Deep Dive</strong> &mdash; Comparaison 2003 vs
-                            2018, catégories I/II/III, justification Cat II pour Prattico</span>
+                            2018, catégories I/II/III, justification Cat II pour Prattico
+                            <em>(détail dans le rapport d'avancement, section 4)</em></span>
                     </div>
                 </div>
                 <div class="grid-3 mt-1">
@@ -1400,6 +1289,87 @@
                         <div class="metric-value">2.8s</div>
                         <div class="metric-label">Wall time<br>Sim 24h complete</div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SLIDE 3b: TRAÇABILITÉ DES PARAMÈTRES ==================== -->
+        <div class="slide">
+            <div class="content-full">
+                <div class="slide-header">
+                    <span class="section-badge purple">RIGUEUR ACADÉMIQUE</span>
+                    <h2 class="slide-title">Traçabilité des paramètres — Chaque valeur a une source</h2>
+                </div>
+
+                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; margin-bottom: 1rem;">
+
+                    <!-- EXPLICITE -->
+                    <div style="background: #f0fdf4; border: 2px solid #16a34a; border-radius: 12px; padding: 1.2rem;">
+                        <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.8rem;">
+                            <span style="background:#16a34a; color:white; font-size:0.7rem; font-weight:700; padding:3px 10px; border-radius:20px; letter-spacing:0.05em;">EXPLICITE</span>
+                            <span style="font-size:0.85rem; font-weight:600; color:#15803d;">Cité mot pour mot dans l'article</span>
+                        </div>
+                        <div style="font-size:0.78rem; color:#166534; margin-bottom:0.5rem; font-style:italic;">→ On peut pointer la page exacte</div>
+                        <table style="width:100%; font-size:0.75rem; border-collapse:collapse;">
+                            <tr style="background:#dcfce7;">
+                                <th style="padding:4px 6px; text-align:left; border-radius:4px;">Paramètre</th>
+                                <th style="padding:4px 6px; text-align:right;">Valeur</th>
+                                <th style="padding:4px 6px; text-align:right;">Source</th>
+                            </tr>
+                            <tr><td style="padding:3px 6px; border-bottom:1px solid #bbf7d0;">PV — Puissance nominale</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bbf7d0; font-weight:600;">150 kWp</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bbf7d0; color:#16a34a;">S3.1</td></tr>
+                            <tr><td style="padding:3px 6px; border-bottom:1px solid #bbf7d0;">Batterie — Énergie</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bbf7d0; font-weight:600;">200 kWh</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bbf7d0; color:#16a34a;">Table 5</td></tr>
+                            <tr><td style="padding:3px 6px; border-bottom:1px solid #bbf7d0;">Batterie — SOC EMS</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bbf7d0; font-weight:600;">30%–90%</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bbf7d0; color:#16a34a;">S2.5 p.682</td></tr>
+                            <tr><td style="padding:3px 6px; border-bottom:1px solid #bbf7d0;">WT — V<sub>cut-out</sub></td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bbf7d0; font-weight:600;">25 m/s</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bbf7d0; color:#16a34a;">Table 5</td></tr>
+                            <tr><td style="padding:3px 6px;">FC — Puissance nominale</td><td style="padding:3px 6px; text-align:right; font-weight:600;">20 kW</td><td style="padding:3px 6px; text-align:right; color:#16a34a;">S3.1</td></tr>
+                        </table>
+                    </div>
+
+                    <!-- INFÉRÉ -->
+                    <div style="background: #eff6ff; border: 2px solid #2563eb; border-radius: 12px; padding: 1.2rem;">
+                        <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.8rem;">
+                            <span style="background:#2563eb; color:white; font-size:0.7rem; font-weight:700; padding:3px 10px; border-radius:20px; letter-spacing:0.05em;">INFÉRÉ</span>
+                            <span style="font-size:0.85rem; font-weight:600; color:#1d4ed8;">Calculé à partir d'autres valeurs explicites</span>
+                        </div>
+                        <div style="font-size:0.78rem; color:#1e40af; margin-bottom:0.5rem; font-style:italic;">→ On peut montrer le calcul</div>
+                        <table style="width:100%; font-size:0.75rem; border-collapse:collapse;">
+                            <tr style="background:#dbeafe;">
+                                <th style="padding:4px 6px; text-align:left; border-radius:4px;">Paramètre</th>
+                                <th style="padding:4px 6px; text-align:right;">Valeur</th>
+                                <th style="padding:4px 6px; text-align:right;">Calcul</th>
+                            </tr>
+                            <tr><td style="padding:3px 6px; border-bottom:1px solid #bfdbfe;">PV — Strings parallèle</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bfdbfe; font-weight:600;">23</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bfdbfe; color:#2563eb;">150k / (270×550W)</td></tr>
+                            <tr><td style="padding:3px 6px; border-bottom:1px solid #bfdbfe;">Batt — V<sub>nom</sub></td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bfdbfe; font-weight:600;">512 V</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bfdbfe; color:#2563eb;">128 cells × 4V</td></tr>
+                            <tr><td style="padding:3px 6px; border-bottom:1px solid #bfdbfe;">Batt — Capacité Ah</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bfdbfe; font-weight:600;">400 Ah</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bfdbfe; color:#2563eb;">200kWh / 512V</td></tr>
+                            <tr><td style="padding:3px 6px; border-bottom:1px solid #bfdbfe;">WT — Rayon rotor</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bfdbfe; font-weight:600;">6.3 m</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #bfdbfe; color:#2563eb;">depuis P = 60 kW</td></tr>
+                            <tr><td style="padding:3px 6px;">WT — α cisaillement</td><td style="padding:3px 6px; text-align:right; font-weight:600;">0.14</td><td style="padding:3px 6px; text-align:right; color:#2563eb;">IEC 61400-1</td></tr>
+                        </table>
+                    </div>
+
+                    <!-- OUVERT -->
+                    <div style="background: #fff7ed; border: 2px solid #ea580c; border-radius: 12px; padding: 1.2rem;">
+                        <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.8rem;">
+                            <span style="background:#ea580c; color:white; font-size:0.7rem; font-weight:700; padding:3px 10px; border-radius:20px; letter-spacing:0.05em;">OUVERT</span>
+                            <span style="font-size:0.85rem; font-weight:600; color:#c2410c;">Non spécifié — valeur par défaut Simscape</span>
+                        </div>
+                        <div style="font-size:0.78rem; color:#9a3412; margin-bottom:0.5rem; font-style:italic;">→ À valider si on obtient les données Prattico</div>
+                        <table style="width:100%; font-size:0.75rem; border-collapse:collapse;">
+                            <tr style="background:#fed7aa;">
+                                <th style="padding:4px 6px; text-align:left; border-radius:4px;">Paramètre</th>
+                                <th style="padding:4px 6px; text-align:right;">Valeur utilisée</th>
+                                <th style="padding:4px 6px; text-align:right;">Impact</th>
+                            </tr>
+                            <tr><td style="padding:3px 6px; border-bottom:1px solid #fdba74;">PV — Rs, Rsh, I₀, n</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #fdba74; font-weight:600;">Défaut Simscape</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #fdba74; color:#ea580c;">Courbe I-V</td></tr>
+                            <tr><td style="padding:3px 6px; border-bottom:1px solid #fdba74;">Batt — R₀ interne</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #fdba74; font-weight:600;">0.04 Ω</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #fdba74; color:#ea580c;">Pertes ohmiques</td></tr>
+                            <tr><td style="padding:3px 6px; border-bottom:1px solid #fdba74;">WT — J, B (inertie)</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #fdba74; font-weight:600;">Défaut PMSM</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #fdba74; color:#ea580c;">Transitoires</td></tr>
+                            <tr><td style="padding:3px 6px; border-bottom:1px solid #fdba74;">FC — η<sub>stack</sub></td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #fdba74; font-weight:600;">55%</td><td style="padding:3px 6px; text-align:right; border-bottom:1px solid #fdba74; color:#ea580c;">P nette FC</td></tr>
+                            <tr><td style="padding:3px 6px;">VSC — L filtre</td><td style="padding:3px 6px; text-align:right; font-weight:600;">1 mH</td><td style="padding:3px 6px; text-align:right; color:#ea580c;">THD courant</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:0.8rem 1.2rem; display:flex; align-items:center; gap:1rem; font-size:0.82rem; color:#475569;">
+                    <span style="font-size:1.2rem;">🎯</span>
+                    <span><strong>Pourquoi ce système ?</strong> Reproduire fidèlement un article = distinguer ce qu'on <em>sait</em> (EXPLICITE), ce qu'on <em>déduit</em> (INFÉRÉ), et ce qu'on <em>assume</em> (OUVERT). Les paramètres OUVERTS sont les premières cibles si l'équipe Prattico répond et partage ses données.</span>
                 </div>
             </div>
         </div>
@@ -1518,443 +1488,132 @@
             </div>
         </div>
 
-        <!-- ==================== SLIDE 5: ARCHITECTURE IMPLEMENTEE ==================== -->
+        <!-- ==================== SLIDE 5: MODELE SIMSCAPE (screenshot) ==================== -->
         <div class="slide">
             <div class="content-full">
                 <div class="slide-header">
-                    <span class="section-badge green">IMPLEMENTATION</span>
-                    <h2 class="slide-title">Architecture implémentée</h2>
+                    <span class="section-badge green">SIMSCAPE</span>
+                    <h2 class="slide-title">Notre modèle Simscape &mdash; Vue d'ensemble</h2>
                 </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Composant</th>
-                            <th>Papier</th>
-                            <th>Notre modèle</th>
-                            <th>Niveau</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>PV + Boost</strong></td>
-                            <td>Eq. 8, 150 kWp, MPPT P&amp;O</td>
-                            <td>Single-diode, D=0.4 fixe</td>
-                            <td><span class="status-pass">Physique</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Batterie + Buck/Boost</strong></td>
-                            <td>Eq. 17-18, 512V/400Ah</td>
-                            <td>SOC intégré, PI régulateur</td>
-                            <td><span class="status-pass">Physique</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Wind Turbine</strong></td>
-                            <td>Eq. 10, PMSG, 55kW</td>
-                            <td>P = 0.5*rho*A*v^3*Cp</td>
-                            <td><span class="status-warn">Average</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Fuel Cell</strong></td>
-                            <td>Eq. 15-16, PEMFC, 18kW</td>
-                            <td>Nernst + pertes</td>
-                            <td><span class="status-warn">Average</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>DC Load</strong></td>
-                            <td>15 kW peak</td>
-                            <td>R(t) = V^2 / P(t)</td>
-                            <td><span class="status-pass">Physique</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>VSC</strong></td>
-                            <td>Bidirectionnel AC/DC</td>
-                            <td>I = P/V, saturation &plusmn;200A</td>
-                            <td><span class="status-warn">Average</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>AC Loads</strong></td>
-                            <td>Residential + Commercial</td>
-                            <td>50kW PF=1, 45kW PF=0.9</td>
-                            <td><span class="status-pass">Physique</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>MPPT P&amp;O</strong></td>
-                            <td>Perturb and Observe</td>
-                            <td>&mdash;</td>
-                            <td><span class="status-fail">Absent</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>EMS Fuzzy</strong></td>
-                            <td>Mamdani, 60 règles</td>
-                            <td>FIS standalone validée sur les cas représentatifs (7/60 règles)</td>
-                            <td><span class="status-warn">Partiel</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="info-box mt-1">
-                    <div class="info-box-title">Legende</div>
-                    <div class="card-text">
-                        <span class="status-pass">Physique</span> = modélisation Simscape fidèle aux équations |
-                        <span class="status-warn">Average</span> = modèle average-value (fonctionnellement correct) |
-                        <span class="status-fail">Absent</span> = non encore implémenté
+                <div style="text-align:center; margin:1rem 0;">
+                    <img src="simscapeClear.png" alt="Modèle Simscape Prattico"
+                         style="max-width:95%; max-height:420px; border:2px solid var(--glass-border); border-radius:8px; box-shadow: var(--shadow-lg);">
+                </div>
+                <div class="info-box" style="max-width:800px; margin:0 auto;">
+                    <div class="card-text" style="font-size:0.82rem; text-align:center; line-height:1.8;">
+                        Reproduction complète du microgrid hybride AC/DC de Prattico et al. (2025) en <strong>Simscape</strong>.
+                        7 sous-systèmes interconnectés via un bus DC 750V.
+                        Construit de manière <strong>incrémentale en 7 phases</strong> (B &rarr; H), chacune validée par des tests automatisés &mdash;
+                        <strong>106 tests, tous réussis</strong>.
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ==================== SLIDE 6: BRANCHE PV ==================== -->
+        <!-- ==================== SLIDE 5b: BLOCS — Organisation spatiale ==================== -->
         <div class="slide">
             <div class="content-full">
                 <div class="slide-header">
-                    <span class="section-badge green">PV</span>
-                    <h2 class="slide-title">Branche Photovoltaïque</h2>
+                    <span class="section-badge green">ARCHITECTURE</span>
+                    <h2 class="slide-title">Les 7 sous-systèmes et leurs connexions</h2>
                 </div>
-                <div class="formula-block" data-label="Eq. 8 &mdash; Single-Diode Model">
-                    I<sub>PV</sub> = I<sub>ph</sub> &minus; I<sub>0</sub> &middot; (exp((V + I&middot;R<sub>s</sub>) /
-                    (n&middot;V<sub>T</sub>)) &minus; 1) &minus; (V + I&middot;R<sub>s</sub>) / R<sub>sh</sub>
-                </div>
-                <div class="grid-2 mt-1">
-                    <div>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Paramètre</th>
-                                    <th>Valeur</th>
-                                    <th>Source</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Puissance PV</td>
-                                    <td>150 kWp</td>
-                                    <td><span class="tag-explicite">EXPLICITE</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Configuration</td>
-                                    <td>12s &times; 23p (276 modules)</td>
-                                    <td><span class="tag-explicite">EXPLICITE</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Duty Cycle D</td>
-                                    <td>0.4 (fixe)</td>
-                                    <td><span class="tag-inference">INFERENCE</span></td>
-                                </tr>
-                                <tr>
-                                    <td>V<sub>oc</sub> module</td>
-                                    <td>~38 V</td>
-                                    <td><span class="tag-inference">INFERENCE</span></td>
-                                </tr>
-                                <tr>
-                                    <td>I<sub>sc</sub> module</td>
-                                    <td>~9 A</td>
-                                    <td><span class="tag-inference">INFERENCE</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <!-- Layout mimicking the Simscape model spatial organization -->
+                <div style="display:grid; grid-template-columns: 1fr 1.2fr 1fr; grid-template-rows: auto auto auto; gap:0.6rem; font-size:0.65rem; margin-top:0.5rem;">
+                    <!-- Row 1: Battery (left) — DC_Bus (center) — WT (right) -->
+                    <div style="background:#f0fdf4; border:2px solid #16a34a; padding:0.5rem; border-radius:8px;">
+                        <strong style="color:#16a34a; font-size:0.75rem;">Battery_System</strong><br>
+                        200 kWh Li-ion, modèle R<sub>int</sub><br>
+                        Buck/Boost + PI &rarr; régule Vdc=750V<br>
+                        <span style="color:#16a34a;">&marker; Simscape physique</span>
                     </div>
-                    <div>
-                        <div class="card">
-                            <div class="card-title">Boost Converter</div>
-                            <div class="card-text">
-                                V<sub>out</sub> = V<sub>in</sub> / (1 &minus; D)<br>
-                                Avec D = 0.4 : V<sub>out</sub> &asymp; V<sub>in</sub> / 0.6
-                            </div>
+                    <div style="background:#eff6ff; border:2px solid #3b82f6; padding:0.5rem; border-radius:8px; text-align:center;">
+                        <strong style="color:#3b82f6; font-size:0.85rem;">DC_Bus 750V</strong><br>
+                        <span style="font-size:0.6rem;">Capacité 4.7 mF &mdash; Point central<br>
+                        Tous les sous-systèmes se connectent ici<br>
+                        PQ_Monitor mesure &Delta;V en temps réel</span><br>
+                        <span style="font-size:0.55rem; color:#64748b;">&#9664; Battery &nbsp;|&nbsp; PV &#9660; &nbsp;|&nbsp; WT &#9654; &nbsp;|&nbsp; FC &#9664; &nbsp;|&nbsp; VSC &#9654; &nbsp;|&nbsp; Load &#9654;</span>
+                    </div>
+                    <div style="background:#fffbeb; border:2px solid #f59e0b; padding:0.5rem; border-radius:8px;">
+                        <strong style="color:#f59e0b; font-size:0.75rem;">WT_System</strong><br>
+                        Éolienne PMSG 60 kW<br>
+                        P = &frac12;&rho;Av&sup3;C<sub>p</sub> (loi cubique)<br>
+                        <span style="color:#f59e0b;">&marker; Average-value</span>
+                    </div>
+
+                    <!-- Row 2: FC (left) — (center empty/EMS) — VSC + Load (right) -->
+                    <div style="background:#fffbeb; border:2px solid #f59e0b; padding:0.5rem; border-radius:8px;">
+                        <strong style="color:#f59e0b; font-size:0.75rem;">FC_System</strong><br>
+                        Pile à combustible PEMFC 18 kW<br>
+                        ON/OFF commandé par EMS<br>
+                        <span style="color:#f59e0b;">&marker; Average-value</span>
+                    </div>
+                    <div style="background:#faf5ff; border:2px solid #8b5cf6; padding:0.5rem; border-radius:8px; text-align:center;">
+                        <strong style="color:#8b5cf6; font-size:0.85rem;">EMS (Intelligence)</strong><br>
+                        <span style="font-size:0.6rem;">FIS Mamdani &mdash; 60 règles<br>
+                        3 entrées : &Delta;P, SOC, Tarif<br>
+                        4 sorties : batterie, AC, grid, FC<br>
+                        <strong>Le cerveau du microgrid</strong></span>
+                    </div>
+                    <div style="display:grid; grid-template-rows: 1fr 1fr; gap:0.4rem;">
+                        <div style="background:#fffbeb; border:2px solid #f59e0b; padding:0.4rem; border-radius:8px;">
+                            <strong style="color:#f59e0b; font-size:0.7rem;">VSC_System</strong><br>
+                            <span style="font-size:0.6rem;">Onduleur DC/AC au PCC<br>750V DC &harr; 400V AC 50Hz</span>
                         </div>
-                        <div class="warning-box mt-1">
-                            <div class="warning-box-title">MPPT P&amp;O = TODO</div>
-                            <div class="card-text">Le papier utilise un algorithme Perturb &amp; Observe. Notre modèle
-                                utilise un duty cycle fixe D=0.4 pour le moment. L'intégration MPPT est prévue en phase
-                                T4.</div>
+                        <div style="background:#f0fdf4; border:2px solid #16a34a; padding:0.4rem; border-radius:8px;">
+                            <strong style="color:#16a34a; font-size:0.7rem;">DC_Load_var</strong><br>
+                            <span style="font-size:0.6rem;">Charge DC 15 kW variable<br>+ AC rés. 50kW + com. 45kW</span>
                         </div>
+                    </div>
+
+                    <!-- Row 3: PV (left) — legend (center-right) -->
+                    <div style="background:#f0fdf4; border:2px solid #16a34a; padding:0.5rem; border-radius:8px;">
+                        <strong style="color:#16a34a; font-size:0.75rem;">PV_System</strong><br>
+                        150 kWp, Solar Cell single-diode<br>
+                        Boost Converter PWM 10 kHz<br>
+                        <span style="color:#16a34a;">&marker; Simscape physique</span>
+                    </div>
+                    <div style="grid-column: span 2; display:flex; gap:2rem; align-items:center; justify-content:center; padding:0.5rem;">
+                        <span><span style="display:inline-block;width:12px;height:12px;background:#16a34a;border-radius:3px;vertical-align:middle;"></span> Simscape physique (équations)</span>
+                        <span><span style="display:inline-block;width:12px;height:12px;background:#f59e0b;border-radius:3px;vertical-align:middle;"></span> Average-value (bilan puissance)</span>
+                        <span><span style="display:inline-block;width:12px;height:12px;background:#8b5cf6;border-radius:3px;vertical-align:middle;"></span> Contrôle / Intelligence</span>
+                        <span><span style="display:inline-block;width:12px;height:12px;background:#3b82f6;border-radius:3px;vertical-align:middle;"></span> Infrastructure</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ==================== SLIDE 7: BRANCHE BATTERIE ==================== -->
+        <!-- ==================== SLIDE: PV_System — Comment je l'ai construit ==================== -->
         <div class="slide">
             <div class="content-full">
                 <div class="slide-header">
-                    <span class="section-badge green">BESS</span>
-                    <h2 class="slide-title">Branche Batterie</h2>
+                    <span class="section-badge" style="background:#16a34a; color:white;">BLOC 1</span>
+                    <h2 class="slide-title">PV_System &mdash; Panneau solaire 150 kWp</h2>
                 </div>
-                <div class="formula-block" data-label="Eq. 17 &mdash; SOC">
-                    SOC(t) = SOC<sub>0</sub> &minus; (1 / Q<sub>n</sub>) &middot; &int; I(t) dt
-                </div>
-                <div class="grid-2 mt-1">
-                    <div>
-                        <div class="formula-block" data-label="Eq. 18 &mdash; Boost / Buck">
-                            Boost : V<sub>out</sub> = V<sub>in</sub> / (1 &minus; D)<br>
-                            Buck : V<sub>out</sub> = D &middot; V<sub>in</sub>
+                <div class="grid-2" style="gap:1.2rem;">
+                    <div style="text-align:center;">
+                        <div style="background:#f8fafc; border:2px dashed #cbd5e1; border-radius:8px; padding:2rem; min-height:250px; display:flex; align-items:center; justify-content:center;">
+                            <img src="pv_system_inside.png" alt="PV_System inside"
+                                 style="max-width:100%; max-height:250px; border-radius:4px;"
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.9rem;>Screenshot &agrave; ajouter :<br><code>pv_system_inside.png</code></div>';">
                         </div>
-                        <table class="mt-1">
-                            <thead>
-                                <tr>
-                                    <th>Paramètre</th>
-                                    <th>Valeur</th>
-                                    <th>Source</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Tension nominale</td>
-                                    <td>512 V</td>
-                                    <td><span class="tag-explicite">EXPLICITE</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Capacité</td>
-                                    <td>400 Ah</td>
-                                    <td><span class="tag-explicite">EXPLICITE</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Chimie</td>
-                                    <td>LiFePO4</td>
-                                    <td><span class="tag-explicite">EXPLICITE</span></td>
-                                </tr>
-                                <tr>
-                                    <td>SOC limites</td>
-                                    <td>30% &ndash; 90%</td>
-                                    <td><span class="tag-explicite">EXPLICITE</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                     <div>
-                        <div class="card">
-                            <div class="card-title">Régulateur PI</div>
-                            <div class="card-text">
-                                Controle le courant de charge/décharge.<br>
-                                K<sub>p</sub> = 0.0001, K<sub>i</sub> = 0.02
-                            </div>
+                        <div class="card" style="border-left:4px solid #16a34a; padding:0.8rem; margin-bottom:0.8rem;">
+                            <div class="card-title" style="color:#16a34a;">Comment je l'ai construit</div>
+                            <ul style="font-size:0.72rem; line-height:1.9; margin:0; padding-left:1.2rem;">
+                                <li>Ouvert la bibliothèque <strong>Simscape &rarr; Electrical &rarr; Semiconductors</strong></li>
+                                <li>Glissé le bloc <strong>Solar Cell</strong> (modèle single-diode à 5 paramètres natif)</li>
+                                <li>Configuré : 864 cellules série &times; 23 strings = <strong>150 kWp</strong></li>
+                                <li>Ajouté un <strong>Boost Converter</strong> (IGBT + diode + inductance) pour élever ~450V &rarr; 750V</li>
+                                <li>Connecté au <strong>DC_Bus</strong> via les ports DC_Plus / DC_Minus</li>
+                            </ul>
                         </div>
-                        <div class="card mt-1">
-                            <div class="card-title">Convertisseur bidirectionnel</div>
-                            <div class="card-text">
-                                Mode Boost (décharge) : élevé la tension batterie vers le bus DC 750V.<br>
-                                Mode Buck (charge) : abaisse la tension bus vers la batterie.
-                            </div>
-                        </div>
-                        <div class="info-box mt-1">
-                            <div class="info-box-title">Gains PI</div>
-                            <div class="card-text">Les gains K<sub>p</sub> et K<sub>i</sub> sont <span
-                                    class="tag-inference">INFERENCE</span> &mdash; non spécifiés dans le papier, ajustés
-                                empiriquement.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ==================== SLIDE 8: WT + FC ==================== -->
-        <div class="slide">
-            <div class="content-full">
-                <div class="slide-header">
-                    <span class="section-badge orange">AVG-VALUE</span>
-                    <h2 class="slide-title">Wind Turbine + Fuel Cell (Average-Value)</h2>
-                </div>
-                <div class="grid-2">
-                    <div>
-                        <h3 style="font-size:1rem; margin-bottom:0.5rem; color:var(--phd-primary);">Wind Turbine</h3>
-                        <div class="formula-block" data-label="Eq. 10 &mdash; Puissance eolienne">
-                            P<sub>WT</sub> = 0.5 &middot; &rho; &middot; A &middot; v<sup>3</sup> &middot; C<sub>p</sub>
-                        </div>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Paramètre</th>
-                                    <th>Valeur</th>
-                                    <th>Source</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Puissance nom.</td>
-                                    <td>55 kW</td>
-                                    <td><span class="tag-explicite">EXPLICITE</span></td>
-                                </tr>
-                                <tr>
-                                    <td>C<sub>p</sub> max</td>
-                                    <td>0.48</td>
-                                    <td><span class="tag-explicite">EXPLICITE</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Rayon rotor</td>
-                                    <td>~9.5 m</td>
-                                    <td><span class="tag-inference">INFERENCE</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Génératrice</td>
-                                    <td>PMSG</td>
-                                    <td><span class="tag-explicite">EXPLICITE</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                        <h3 style="font-size:1rem; margin-bottom:0.5rem; color:var(--phd-primary);">Fuel Cell (PEMFC)
-                        </h3>
-                        <div class="formula-block" data-label="Eq. 15 &mdash; Nernst">
-                            E = E<sub>0</sub> + (RT / 2F) &middot; ln(p<sub>H2</sub> &middot;
-                            p<sub>O2</sub><sup>0.5</sup> / p<sub>H2O</sub>)
-                        </div>
-                        <div class="formula-block" data-label="Eq. 16 &mdash; Tension FC">
-                            V<sub>FC</sub> = N &middot; (E &minus; V<sub>act</sub> &minus; V<sub>ohm</sub> &minus;
-                            V<sub>conc</sub>)
-                        </div>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Paramètre</th>
-                                    <th>Valeur</th>
-                                    <th>Source</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Puissance nom.</td>
-                                    <td>18 kW</td>
-                                    <td><span class="tag-explicite">EXPLICITE</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Type</td>
-                                    <td>PEMFC</td>
-                                    <td><span class="tag-explicite">EXPLICITE</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Nb cellules N</td>
-                                    <td>~65</td>
-                                    <td><span class="tag-inference">INFERENCE</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="info-box mt-1">
-                    <div class="info-box-title">Modélisation Average-Value</div>
-                    <div class="card-text">WT et FC sont modelises en average-value (source de courant commandee)
-                        &mdash; pas de modèle switching détaillé. Les équations du papier sont respectees
-                        fonctionnellement.</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ==================== SLIDE 9: CHARGES + VSC ==================== -->
-        <div class="slide">
-            <div class="content-full">
-                <div class="slide-header">
-                    <span class="section-badge green">CHARGES</span>
-                    <h2 class="slide-title">Charges DC/AC + VSC</h2>
-                </div>
-                <div class="grid-3">
-                    <div class="card">
-                        <div class="card-title">DC Load</div>
-                        <div class="card-text">
-                            R(t) = V<sup>2</sup> / P(t)<br>
-                            Pic : 15 kW<br>
-                            Bus : 750 V DC
-                        </div>
-                        <div style="margin-top:0.3rem;">
-                            <span class="tag-explicite">EXPLICITE</span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-title">AC Load &mdash; Residential</div>
-                        <div class="card-text">
-                            P = 50 kW<br>
-                            PF = 1.0 (resistif pur)<br>
-                            230 V / 50 Hz
-                        </div>
-                        <div style="margin-top:0.3rem;">
-                            <span class="tag-explicite">EXPLICITE</span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-title">AC Load &mdash; Commercial</div>
-                        <div class="card-text">
-                            P = 45 kW<br>
-                            PF = 0.9 (inductif)<br>
-                            230 V / 50 Hz
-                        </div>
-                        <div style="margin-top:0.3rem;">
-                            <span class="tag-explicite">EXPLICITE</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-2 mt-1">
-                    <div class="card">
-                        <div class="card-title">VSC (Voltage Source Converter)</div>
-                        <div class="card-text">
-                            Modèle average-value : I = P / V<br>
-                            Saturation courant : &plusmn;200 A<br>
-                            Lien bidirectionnel Bus DC &harr; Bus AC<br>
-                            Regulation : maintien V<sub>AC</sub> = 230 V rms
-                        </div>
-                        <div style="margin-top:0.3rem;">
-                            <span class="tag-inference">INFERENCE</span> Architecture détaillée non spécifiée
-                        </div>
-                    </div>
-                    <div class="warning-box">
-                        <div class="warning-box-title">Limitation actuelle</div>
-                        <div class="card-text">
-                            Le VSC est un modèle average-value simplifié. Le papier mentionne un VSC bidirectionnel mais
-                            ne détaillé pas l'architecture de commande (PWM, dq-frame, etc.). Le passage en modèle
-                            detailed est prévu en phase T3.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ==================== SLIDE 10: VOCABULAIRE IEEE 1547 ==================== -->
-        <div class="slide">
-            <div class="content-full">
-                <div class="slide-header">
-                    <span class="section-badge purple">VOCABULAIRE</span>
-                    <h2 class="slide-title">Vocabulaire IEEE 1547 &mdash; Les 4 concepts clés</h2>
-                </div>
-                <div class="grid-2">
-                    <div class="card" style="padding:0.8rem; border-left:4px solid var(--accent-blue);">
-                        <div style="font-size:0.85rem; font-weight:700; margin-bottom:0.4rem;">Per Unit (pu)</div>
-                        <div style="font-size:0.75rem; line-height:1.6; margin-bottom:0.3rem;">
-                            Valeur normalisée par rapport au nominal :
-                            <strong>value<sub>pu</sub> = actual / nominal</strong>
-                        </div>
-                        <div class="info-box" style="margin:0; padding:0.4rem;">
-                            <div style="font-size:0.7rem;">
-                                Exemple : <strong>0.70 pu</strong> sur un réseau 400 V = 0.70 &times; 400 = <strong>280 V</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" style="padding:0.8rem; border-left:4px solid var(--accent-green);">
-                        <div style="font-size:0.85rem; font-weight:700; margin-bottom:0.4rem;">Ride-through</div>
-                        <div style="font-size:0.75rem; line-height:1.6; margin-bottom:0.3rem;">
-                            Capacité du DER à <strong>rester connecté</strong> pendant une perturbation de tension ou fréquence.
-                        </div>
-                        <div class="info-box" style="margin:0; padding:0.4rem;">
-                            <div style="font-size:0.7rem;">
-                                Exemple : UV1 = 0.70 pu / 10 s &rarr; si la tension chute à 70 %, le DER <strong>reste connecté 10 secondes</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" style="padding:0.8rem; border-left:4px solid #a855f7;">
-                        <div style="font-size:0.85rem; font-weight:700; margin-bottom:0.4rem;">Volt-var</div>
-                        <div style="font-size:0.75rem; line-height:1.6; margin-bottom:0.3rem;">
-                            Le DER ajuste sa <strong>puissance réactive Q</strong> en fonction de la tension locale.
-                        </div>
-                        <div class="info-box" style="margin:0; padding:0.4rem;">
-                            <div style="font-size:0.7rem;">
-                                Tension haute &rarr; absorber Q (réduire V) | Tension basse &rarr; injecter Q (remonter V)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" style="padding:0.8rem; border-left:4px solid var(--accent-red);">
-                        <div style="font-size:0.85rem; font-weight:700; margin-bottom:0.4rem;">Frequency Droop</div>
-                        <div style="font-size:0.75rem; line-height:1.6; margin-bottom:0.3rem;">
-                            Le DER <strong>réduit sa puissance active P</strong> si la fréquence du réseau monte au-dessus de 50/60 Hz.
-                        </div>
-                        <div class="info-box" style="margin:0; padding:0.4rem;">
-                            <div style="font-size:0.7rem;">
-                                Droop 5 % = pour chaque +5 % de fréquence, le DER réduit P de 100 %
+                        <div class="info-box">
+                            <div class="info-box-title">Pourquoi Simscape physique ?</div>
+                            <div class="card-text" style="font-size:0.72rem;">
+                                Le bloc Solar Cell modélise la courbe I-V complète avec température et irradiance.
+                                C'est un modèle <strong>à équations</strong>, pas une approximation &mdash;
+                                fidèle à l'Eq. 8 de Prattico (Villalva et al., 2009).
                             </div>
                         </div>
                     </div>
@@ -1962,285 +1621,166 @@
             </div>
         </div>
 
-        <!-- ==================== SLIDE 11: IEEE 1547 LE PIVOT ==================== -->
+        <!-- ==================== SLIDE: Battery_System ==================== -->
         <div class="slide">
             <div class="content-full">
                 <div class="slide-header">
-                    <span class="section-badge purple">IEEE 1547</span>
-                    <h2 class="slide-title">IEEE 1547 &mdash; Le pivot de 2003 à 2018</h2>
+                    <span class="section-badge" style="background:#16a34a; color:white;">BLOC 2</span>
+                    <h2 class="slide-title">Battery_System &mdash; Batterie Li-ion 200 kWh</h2>
                 </div>
-                <p style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:0.8rem;">
-                    <em>Standard for Interconnection and Interoperability of Distributed Energy Resources with
-                        Associated Electric Power Systems Interfaces</em>
-                </p>
-                <div class="grid-2">
-                    <div class="card" style="padding:0.8rem; border-left:4px solid var(--accent-red);">
-                        <div style="font-size:0.9rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-red);">
-                            IEEE 1547-2003 &mdash; &laquo; Déconnecte-toi ! &raquo;</div>
-                        <ul style="font-size:0.75rem; line-height:1.6;">
-                            <li>Tension ou fréquence hors limites &rarr; <strong>trip immédiat</strong></li>
-                            <li>Le DER est passif : il injecte du courant, rien d'autre</li>
-                            <li>Puissance réactive interdite (PF = 1)</li>
-                            <li>Pas de ride-through, pas de support réseau</li>
-                            <li>Anti-îlotage obligatoire (déconnexion en 2 s)</li>
-                        </ul>
+                <div class="grid-2" style="gap:1.2rem;">
+                    <div style="text-align:center;">
+                        <div style="background:#f8fafc; border:2px dashed #cbd5e1; border-radius:8px; padding:2rem; min-height:250px; display:flex; align-items:center; justify-content:center;">
+                            <img src="battery_system_inside.png" alt="Battery_System inside"
+                                 style="max-width:100%; max-height:250px; border-radius:4px;"
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.9rem;>Screenshot &agrave; ajouter :<br><code>battery_system_inside.png</code></div>';">
+                        </div>
                     </div>
-                    <div class="card" style="padding:0.8rem; border-left:4px solid var(--accent-green);">
-                        <div style="font-size:0.9rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-green);">
-                            IEEE 1547-2018 &mdash; &laquo; Reste et soutiens ! &raquo;</div>
-                        <ul style="font-size:0.75rem; line-height:1.6;">
-                            <li>Ride-through <strong>obligatoire</strong> (rester connecté pendant les perturbations)</li>
-                            <li>Support réactif requis (volt-var, volt-watt, frequency droop)</li>
-                            <li>3 catégories de performance (I, II, III)</li>
-                            <li>Îlotage intentionnel permis</li>
-                            <li>Protocoles d'interopérabilité requis</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="warning-box mt-1">
-                    <div class="warning-box-title">Blue Cut Fire &mdash; Californie, 2016</div>
-                    <div class="card-text" style="font-size:0.75rem;">
-                        <strong>1 200 MW</strong> de PV déconnectés en quelques secondes à cause de la règle 2003.
-                        Cet événement a accéléré la révision du standard. En 2018, la pénétration RES dépasse 30 %
-                        dans certaines zones &mdash; déconnecter massivement = <strong>blackout en cascade</strong>.
+                    <div>
+                        <div class="card" style="border-left:4px solid #16a34a; padding:0.8rem; margin-bottom:0.8rem;">
+                            <div class="card-title" style="color:#16a34a;">Comment je l'ai construit</div>
+                            <ul style="font-size:0.72rem; line-height:1.9; margin:0; padding-left:1.2rem;">
+                                <li>Bloc <strong>Battery (Table-Based)</strong> de Simscape Electrical</li>
+                                <li>Paramètres : 512V nominal, 400 Ah, modèle R<sub>int</sub> (résistance interne)</li>
+                                <li>Ajouté un <strong>convertisseur Buck/Boost bidirectionnel</strong> pour charge et décharge</li>
+                                <li><strong>Régulateur PI</strong> en boucle fermée sur la tension du bus DC (consigne 750V)</li>
+                                <li>Le PI ajuste le courant batterie pour <strong>stabiliser le bus DC</strong></li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <div class="info-box-title">Rôle critique</div>
+                            <div class="card-text" style="font-size:0.72rem;">
+                                La batterie est le <strong>régulateur du bus DC</strong>. Elle absorbe les surplus
+                                et compense les déficits. C'est elle que l'EMS contrôle en priorité.
+                                Le SOC (30-90%) est la contrainte de sécurité principale.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ==================== SLIDE 12: CATÉGORIE I ==================== -->
+        <!-- ==================== SLIDE: WT + FC + VSC (Average-value) ==================== -->
         <div class="slide">
             <div class="content-full">
                 <div class="slide-header">
-                    <span class="section-badge purple">CAT I</span>
-                    <h2 class="slide-title">Catégorie I &mdash; Performance de base</h2>
+                    <span class="section-badge" style="background:#f59e0b; color:white;">BLOCS 3-5</span>
+                    <h2 class="slide-title">Éolienne, Fuel Cell, VSC &mdash; Modèles Average-Value</h2>
                 </div>
-                <div class="grid-2">
+                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:0.8rem;">
                     <div>
-                        <div class="card" style="padding:0.8rem; border-top:4px solid #94a3b8;">
-                            <div style="font-size:0.85rem; font-weight:700; margin-bottom:0.5rem;">Profil typique</div>
-                            <ul style="font-size:0.75rem; line-height:1.8;">
-                                <li>PV résidentiel &lt; 25 kW</li>
-                                <li>Zone rurale, faible pénétration RES</li>
-                                <li>Générateur diesel de secours</li>
-                                <li>Machines synchrones (inertie mécanique)</li>
+                        <div style="background:#f8fafc; border:2px dashed #cbd5e1; border-radius:8px; padding:1rem; min-height:150px; display:flex; align-items:center; justify-content:center; margin-bottom:0.6rem;">
+                            <img src="wt_system_inside.png" alt="WT inside"
+                                 style="max-width:100%; max-height:140px; border-radius:4px;"
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.75rem;><code>wt_system_inside.png</code></div>';">
+                        </div>
+                        <div class="card" style="border-left:3px solid #f59e0b; padding:0.6rem;">
+                            <div class="card-title" style="font-size:0.8rem; color:#f59e0b;">WT_System (60 kW)</div>
+                            <ul style="font-size:0.65rem; line-height:1.8; margin:0; padding-left:1rem;">
+                                <li>Bloc <strong>Controlled Current Source</strong></li>
+                                <li>Calcul : P = &frac12;&rho;Av&sup3;C<sub>p</sub></li>
+                                <li>Profil de vent &rarr; courant injecté dans le bus DC</li>
+                                <li><em>Average-value car pas de PMSG à modéliser</em></li>
                             </ul>
                         </div>
                     </div>
                     <div>
-                        <div class="card" style="padding:0.8rem; border-top:4px solid #94a3b8;">
-                            <div style="font-size:0.85rem; font-weight:700; margin-bottom:0.5rem;">Seuils de protection</div>
-                            <table style="font-size:0.7rem; width:100%;">
-                                <thead>
-                                    <tr><th>Seuil</th><th>Valeur</th><th>Durée</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>OV2</td><td>1.20 pu</td><td><strong>0.16 s</strong></td></tr>
-                                    <tr><td>OV1</td><td>1.10 pu</td><td><strong>2.0 s</strong></td></tr>
-                                    <tr><td>UV1</td><td>0.70 pu</td><td><strong>2.0 s</strong></td></tr>
-                                    <tr><td>UV2</td><td>0.45 pu</td><td><strong>0.16 s</strong></td></tr>
-                                </tbody>
-                            </table>
+                        <div style="background:#f8fafc; border:2px dashed #cbd5e1; border-radius:8px; padding:1rem; min-height:150px; display:flex; align-items:center; justify-content:center; margin-bottom:0.6rem;">
+                            <img src="fc_system_inside.png" alt="FC inside"
+                                 style="max-width:100%; max-height:140px; border-radius:4px;"
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.75rem;><code>fc_system_inside.png</code></div>';">
                         </div>
-                    </div>
-                </div>
-                <div class="card mt-1" style="padding:0.6rem; font-size:0.75rem;">
-                    <strong>Volt-var :</strong> optionnel &nbsp;|&nbsp;
-                    <strong>Frequency droop :</strong> non requis &nbsp;|&nbsp;
-                    <strong>Îlotage :</strong> interdit
-                </div>
-                <div class="warning-box mt-1">
-                    <div class="warning-box-title">Limite</div>
-                    <div class="card-text" style="font-size:0.75rem;">
-                        Seulement <strong>2 secondes</strong> de ride-through en sous-tension (UV1).
-                        Si trop de DER Cat I dans une zone &rarr; risque de déconnexion massive lors d'un creux de tension.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ==================== SLIDE 13: CATÉGORIE II (NOTRE CAS) ==================== -->
-        <div class="slide">
-            <div class="content-full">
-                <div class="slide-header">
-                    <span class="section-badge purple">CAT II</span>
-                    <h2 class="slide-title">Catégorie II &mdash; Performance intermédiaire (notre cas)</h2>
-                </div>
-                <div class="grid-2">
-                    <div>
-                        <div class="card" style="padding:0.8rem; border-top:4px solid var(--accent-blue);">
-                            <div style="font-size:0.85rem; font-weight:700; margin-bottom:0.5rem;">Profil typique</div>
-                            <ul style="font-size:0.75rem; line-height:1.8;">
-                                <li><strong>Microgrid hybride AC/DC 100 kW &ndash; 10 MW</strong></li>
-                                <li>Campus universitaire, bâtiment commercial</li>
-                                <li>Ferme PV moyenne (100-500 kW)</li>
-                                <li>Systèmes avec stockage batterie</li>
-                                <li>Inverter-based DER (standard minimum pour onduleurs)</li>
+                        <div class="card" style="border-left:3px solid #f59e0b; padding:0.6rem;">
+                            <div class="card-title" style="font-size:0.8rem; color:#f59e0b;">FC_System (18 kW)</div>
+                            <ul style="font-size:0.65rem; line-height:1.8; margin:0; padding-left:1rem;">
+                                <li>Bloc <strong>Controlled Current Source</strong></li>
+                                <li>Commande ON/OFF par signal <code>FC_cmd</code> du EMS</li>
+                                <li>18 kW constant quand activée</li>
+                                <li><em>Backup pour les déficits importants</em></li>
                             </ul>
                         </div>
                     </div>
                     <div>
-                        <div class="card" style="padding:0.8rem; border-top:4px solid var(--accent-blue);">
-                            <div style="font-size:0.85rem; font-weight:700; margin-bottom:0.5rem;">Seuils de protection</div>
-                            <table style="font-size:0.7rem; width:100%;">
-                                <thead>
-                                    <tr><th>Seuil</th><th>Valeur</th><th>Durée</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>OV2</td><td>1.20 pu</td><td><strong>0.16 s</strong></td></tr>
-                                    <tr><td>OV1</td><td>1.10 pu</td><td><strong>2.0 s</strong></td></tr>
-                                    <tr style="background:rgba(59,130,246,0.1);">
-                                        <td>UV1</td><td>0.70 pu</td><td><strong>10.0 s</strong> (5&times; Cat I !)</td>
-                                    </tr>
-                                    <tr><td>UV2</td><td>0.45 pu</td><td><strong>0.16 s</strong></td></tr>
-                                </tbody>
-                            </table>
+                        <div style="background:#f8fafc; border:2px dashed #cbd5e1; border-radius:8px; padding:1rem; min-height:150px; display:flex; align-items:center; justify-content:center; margin-bottom:0.6rem;">
+                            <img src="vsc_system_inside.png" alt="VSC inside"
+                                 style="max-width:100%; max-height:140px; border-radius:4px;"
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.75rem;><code>vsc_system_inside.png</code></div>';">
                         </div>
-                    </div>
-                </div>
-                <div class="card mt-1" style="padding:0.6rem; font-size:0.75rem;">
-                    <strong>Volt-var :</strong> obligatoire &nbsp;|&nbsp;
-                    <strong>Frequency droop :</strong> 5 % obligatoire &nbsp;|&nbsp;
-                    <strong>Îlotage :</strong> possible
-                </div>
-                <div class="success-box mt-1">
-                    <div class="success-box-title">Prattico = Catégorie II</div>
-                    <div class="card-text" style="font-size:0.75rem;">
-                        Le microgrid Prattico (330 kW total, inverter-based, îlotage, stockage) correspond au profil Cat II.
-                        C'est le standard minimum recommandé pour tout nouvel onduleur par IEEE 1547-2018.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ==================== SLIDE 14: CATÉGORIE III ==================== -->
-        <div class="slide">
-            <div class="content-full">
-                <div class="slide-header">
-                    <span class="section-badge purple">CAT III</span>
-                    <h2 class="slide-title">Catégorie III &mdash; Performance avancée</h2>
-                </div>
-                <div class="grid-2">
-                    <div>
-                        <div class="card" style="padding:0.8rem; border-top:4px solid var(--accent-red);">
-                            <div style="font-size:0.85rem; font-weight:700; margin-bottom:0.5rem;">Profil typique</div>
-                            <ul style="font-size:0.75rem; line-height:1.8;">
-                                <li>Ferme solaire &gt; 10 MW (utility scale)</li>
-                                <li>Parc éolien offshore</li>
-                                <li>Zone à 50 %+ de pénétration RES</li>
-                                <li>DER critique pour la stabilité du réseau</li>
-                                <li>Battery Energy Storage System (BESS) réseau</li>
+                        <div class="card" style="border-left:3px solid #f59e0b; padding:0.6rem;">
+                            <div class="card-title" style="font-size:0.8rem; color:#f59e0b;">VSC_System (150 kVA)</div>
+                            <ul style="font-size:0.65rem; line-height:1.8; margin:0; padding-left:1rem;">
+                                <li>Bloc <strong>Controlled Current Source</strong> côté AC</li>
+                                <li>Couplage DC 750V &harr; AC 400V / 50 Hz</li>
+                                <li>Charges : résidentiel 50 kW + commercial 45 kW</li>
+                                <li><em>Point de connexion commun (PCC) avec le réseau</em></li>
                             </ul>
                         </div>
                     </div>
-                    <div>
-                        <div class="card" style="padding:0.8rem; border-top:4px solid var(--accent-red);">
-                            <div style="font-size:0.85rem; font-weight:700; margin-bottom:0.5rem;">Seuils de protection</div>
-                            <table style="font-size:0.7rem; width:100%;">
-                                <thead>
-                                    <tr><th>Seuil</th><th>Valeur</th><th>Durée</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>OV2</td><td>1.20 pu</td><td><strong>0.16 s</strong></td></tr>
-                                    <tr style="background:rgba(239,68,68,0.1);">
-                                        <td>OV1</td><td>1.10 pu</td><td><strong>13.0 s</strong></td>
-                                    </tr>
-                                    <tr style="background:rgba(239,68,68,0.1);">
-                                        <td>UV1</td><td>0.88 pu</td><td><strong>21.0 s</strong></td>
-                                    </tr>
-                                    <tr><td>UV2</td><td>0.50 pu</td><td><strong>2.0 s</strong></td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mt-1" style="padding:0.6rem; font-size:0.75rem;">
-                    <strong>Volt-var :</strong> obligatoire + dynamique &nbsp;|&nbsp;
-                    <strong>Frequency droop :</strong> ajustable 2-12 % &nbsp;|&nbsp;
-                    <strong>Îlotage :</strong> supporté nativement
                 </div>
                 <div class="info-box mt-1">
-                    <div class="info-box-title">Coût</div>
-                    <div class="card-text" style="font-size:0.75rem;">
-                        Cat III exige du hardware de protection plus complexe et plus coûteux : convertisseurs surdimensionnés,
-                        protections anti-îlotage avancées, firmware spécialisé. Justifié uniquement pour les installations critiques.
+                    <div class="info-box-title">Pourquoi average-value pour ces 3 blocs ?</div>
+                    <div class="card-text" style="font-size:0.72rem;">
+                        Un modèle physique complet (PMSG + pont de diodes pour l'éolienne, électrochimie PEMFC pour la FC,
+                        contrôle dq-frame pour le VSC) nécessite un pas de simulation de 3&mu;s &mdash;
+                        une simulation 24h prendrait <strong>des jours</strong>.
+                        L'average-value préserve le <strong>bilan de puissance</strong> avec un pas de 1ms,
+                        permettant 24h en 2.8 secondes. C'est l'approche utilisée par Prattico (Table 5).
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ==================== SLIDE 15: COMPARAISON I vs II vs III ==================== -->
+        <!-- SLIDES 6-9 (PV, Batterie, WT+FC, Charges+VSC) removed - see original -->
+
+        <!-- SLIDES 10-15 (IEEE 1547 categories detail) removed — covered in rapport d avancement -->
+
+        <!-- ==================== INTRO: QU'EST-CE QUE LE FIS ? ==================== -->
         <div class="slide">
             <div class="content-full">
                 <div class="slide-header">
-                    <span class="section-badge purple">COMPARAISON</span>
-                    <h2 class="slide-title">Cat I vs II vs III &mdash; Vue d'ensemble</h2>
+                    <span class="section-badge orange">CONCEPT</span>
+                    <h2 class="slide-title">Le FIS &mdash; Système d'Inférence Floue</h2>
                 </div>
-                <table class="table-academic" style="font-size:0.7rem;">
-                    <thead>
-                        <tr>
-                            <th>Seuil</th>
-                            <th style="background:#94a3b8;">Cat I</th>
-                            <th style="background:var(--accent-blue); color:white;">Cat II (Prattico)</th>
-                            <th style="background:var(--accent-red); color:white;">Cat III</th>
-                            <th>Ce que ça veut dire concrètement</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>UV1</strong></td>
-                            <td>0.70 pu / <strong>2 s</strong></td>
-                            <td style="font-weight:700;">0.70 pu / <strong>10 s</strong></td>
-                            <td>0.88 pu / <strong>21 s</strong></td>
-                            <td style="font-size:0.65rem;">Durée de maintien en sous-tension avant déconnexion</td>
-                        </tr>
-                        <tr>
-                            <td><strong>UV2</strong></td>
-                            <td>0.45 pu / <strong>0.16 s</strong></td>
-                            <td style="font-weight:700;">0.45 pu / <strong>0.16 s</strong></td>
-                            <td>0.50 pu / <strong>2.0 s</strong></td>
-                            <td style="font-size:0.65rem;">Seuil de coupure d'urgence en sous-tension sévère</td>
-                        </tr>
-                        <tr>
-                            <td><strong>OV1</strong></td>
-                            <td>1.10 pu / <strong>2 s</strong></td>
-                            <td style="font-weight:700;">1.10 pu / <strong>2 s</strong></td>
-                            <td>1.10 pu / <strong>13 s</strong></td>
-                            <td style="font-size:0.65rem;">Tolérance aux surtensions avant déconnexion</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Volt-var</strong></td>
-                            <td>Optionnel</td>
-                            <td style="font-weight:700;">Obligatoire</td>
-                            <td>Obligatoire + dynamique</td>
-                            <td style="font-size:0.65rem;">Régulation de tension par injection/absorption de réactif</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Freq. droop</strong></td>
-                            <td>Non requis</td>
-                            <td style="font-weight:700;">5 % (obligatoire)</td>
-                            <td>Ajustable 2-12 %</td>
-                            <td style="font-size:0.65rem;">Réduction de P si la fréquence dépasse le nominal</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Îlotage</strong></td>
-                            <td>Interdit</td>
-                            <td style="font-weight:700;">Possible</td>
-                            <td>Natif</td>
-                            <td style="font-size:0.65rem;">Le microgrid peut-il fonctionner sans le réseau ?</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="grid-2 mt-1">
-                    <div class="card" style="padding:0.5rem; border-left:3px solid var(--accent-blue);">
-                        <div style="font-size:0.75rem; font-weight:600;">Saut I &rarr; II</div>
-                        <div style="font-size:0.65rem;">Le ride-through UV1 passe de <strong>2 s à 10 s</strong> (5&times; plus long).
-                            Le DER ne se déconnecte plus au premier creux &mdash; il soutient activement le réseau.</div>
+                <div class="grid-2" style="gap:1.5rem;">
+                    <div>
+                        <div class="card" style="border-left:4px solid var(--accent-blue); padding:1rem; margin-bottom:1rem;">
+                            <div class="card-title" style="color:var(--accent-blue);">C'est quoi ?</div>
+                            <div class="card-text" style="font-size:0.78rem; line-height:1.8;">
+                                Un <strong>cerveau décisionnel</strong> basé sur des règles IF-THEN en langage humain.
+                                Au lieu de formules mathématiques complexes, on écrit :
+                                <em>"SI le surplus est élevé ET le SOC est bas ALORS charger la batterie"</em>.
+                                Le système traduit ces règles en commandes numériques précises.
+                            </div>
+                        </div>
+                        <div class="card" style="border-left:4px solid var(--accent-green); padding:1rem;">
+                            <div class="card-title" style="color:var(--accent-green);">Pourquoi Mamdani ?</div>
+                            <div class="card-text" style="font-size:0.78rem; line-height:1.8;">
+                                C'est le type de FIS le plus utilisé en gestion d'énergie (Prattico et al., 2025).
+                                <strong>Avantage</strong> : les règles sont lisibles par un ingénieur &mdash; on sait
+                                POURQUOI le système prend chaque décision. Contrairement à un réseau de neurones
+                                (boîte noire), le FIS est <strong>interprétable et auditable</strong>.
+                            </div>
+                        </div>
                     </div>
-                    <div class="card" style="padding:0.5rem; border-left:3px solid var(--accent-red);">
-                        <div style="font-size:0.75rem; font-weight:600;">Saut II &rarr; III</div>
-                        <div style="font-size:0.65rem;">UV2 passe de <strong>0.16 s à 2.0 s</strong> et le seuil UV1 monte à
-                            <strong>0.88 pu / 21 s</strong>. Le DER doit encaisser des creux sévères beaucoup plus longtemps.</div>
+                    <div>
+                        <div class="card" style="border-left:4px solid var(--accent-orange); padding:1rem; margin-bottom:1rem;">
+                            <div class="card-title" style="color:var(--accent-orange);">Comment ça marche ?</div>
+                            <div class="card-text" style="font-size:0.75rem; line-height:1.8;">
+                                <strong>3 entrées</strong> &rarr; <strong>60 règles</strong> &rarr; <strong>4 sorties</strong><br><br>
+                                Entrées : <em>&Delta;P</em> (surplus/déficit), <em>SOC</em> (batterie), <em>Tarif</em> (prix)<br>
+                                Sorties : puissance batterie, dispatch AC, connexion grid, activation FC<br><br>
+                                Méthode : fuzzification &rarr; min des entrées &rarr; max des règles &rarr; centroïde
+                            </div>
+                        </div>
+                        <div class="card" style="border-left:4px solid var(--accent-purple); padding:1rem;">
+                            <div class="card-title" style="color:var(--accent-purple);">Notre implémentation</div>
+                            <div class="card-text" style="font-size:0.78rem; line-height:1.8;">
+                                <strong>200 lignes de MATLAB pur</strong> &mdash; sans Fuzzy Logic Toolbox.<br>
+                                Portable, transparent, zéro dépendance.<br>
+                                C'est ce code que l'agent AutoResearch modifie pour découvrir
+                                des configurations optimales.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2452,6 +1992,57 @@
             </div>
         </div>
 
+        <!-- ==================== INTRO: POURQUOI SIMULER 24H ? ==================== -->
+        <div class="slide">
+            <div class="content-full">
+                <div class="slide-header">
+                    <span class="section-badge blue">CONCEPT</span>
+                    <h2 class="slide-title">Pourquoi simuler 24 heures ?</h2>
+                </div>
+                <div class="grid-2" style="gap:1.5rem;">
+                    <div>
+                        <div class="card" style="border-left:4px solid var(--accent-blue); padding:1rem; margin-bottom:1rem;">
+                            <div class="card-title" style="color:var(--accent-blue);">Objectif</div>
+                            <div class="card-text" style="font-size:0.78rem; line-height:1.8;">
+                                Vérifier que l'EMS gère <strong>tous les régimes d'une journée</strong> :
+                                surplus solaire en journée, déficit la nuit, transitions matin/soir,
+                                variations de tarif. Un test de 1 minute ne montre qu'un seul régime.
+                            </div>
+                        </div>
+                        <div class="card" style="border-left:4px solid var(--accent-green); padding:1rem;">
+                            <div class="card-title" style="color:var(--accent-green);">Inputs (4 profils réels)</div>
+                            <div class="card-text" style="font-size:0.78rem; line-height:1.8;">
+                                <strong>Irradiance</strong> : 0&rarr;1000&rarr;0 W/m&sup2; (PVGIS, Reggio Calabria, 15 juin)<br>
+                                <strong>Vent</strong> : 3&rarr;12 m/s, variable sur 24h (IEC 61400-1)<br>
+                                <strong>Charges</strong> : DC 15kW + AC 95kW, pics matin/soir<br>
+                                <strong>Tarif</strong> : 0.05&rarr;0.15 &euro;/kWh, 3 niveaux ARERA
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card" style="border-left:4px solid var(--accent-orange); padding:1rem; margin-bottom:1rem;">
+                            <div class="card-title" style="color:var(--accent-orange);">Outputs (5 métriques)</div>
+                            <div class="card-text" style="font-size:0.78rem; line-height:1.8;">
+                                <strong>&Delta;V<sub>DC</sub></strong> : stabilité tension du bus (doit rester &lt;5%)<br>
+                                <strong>SOC</strong> : trajectoire batterie sur 24h (doit rester dans 30-90%)<br>
+                                <strong>Coût</strong> : import réseau &times; tarif horaire<br>
+                                <strong>Autoconsommation</strong> : % de génération consommée localement<br>
+                                <strong>Violations</strong> : nombre de dépassements IEEE 1547
+                            </div>
+                        </div>
+                        <div class="card" style="border-left:4px solid var(--accent-purple); padding:1rem;">
+                            <div class="card-title" style="color:var(--accent-purple);">Performance</div>
+                            <div class="card-text" style="font-size:0.78rem; line-height:1.8;">
+                                24 heures simulées en <strong>2.8 secondes</strong> (modèle average-value).<br>
+                                Soit <strong>1200 expériences par heure</strong> &mdash; c'est ce qui rend
+                                AutoResearch possible : tester 1000 configurations en une nuit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- ==================== SLIDE 15: SIMULATION 24H ==================== -->
         <div class="slide">
             <div class="content-full">
@@ -2640,6 +2231,44 @@
             </div>
         </div>
 
+        <!-- ==================== INTRO: CASE A vs B — C'EST QUOI ? ==================== -->
+        <div class="slide">
+            <div class="content-full">
+                <div class="slide-header">
+                    <span class="section-badge blue">CONCEPT</span>
+                    <h2 class="slide-title">Pourquoi comparer Case A et Case B ?</h2>
+                </div>
+                <div class="grid-2" style="gap:1.5rem;">
+                    <div class="card" style="border-left:4px solid var(--accent-red); padding:1rem;">
+                        <div class="card-title" style="font-size:1.1rem; color:var(--accent-red);">Case A &mdash; Sans EMS</div>
+                        <div class="card-text" style="font-size:0.8rem; line-height:1.8;">
+                            Le microgrid tourne <strong>sans intelligence</strong>. La batterie se charge et décharge
+                            passivement selon le surplus/déficit du bus DC. Pas de gestion des priorités,
+                            pas de protection SOC, pas de stratégie tarifaire.<br><br>
+                            <strong>Question</strong> : que se passe-t-il sans EMS ?
+                        </div>
+                    </div>
+                    <div class="card" style="border-left:4px solid var(--accent-green); padding:1rem;">
+                        <div class="card-title" style="font-size:1.1rem; color:var(--accent-green);">Case B &mdash; Avec EMS (FIS)</div>
+                        <div class="card-text" style="font-size:0.8rem; line-height:1.8;">
+                            Le FIS Mamdani (60 règles) <strong>décide</strong> à chaque instant :
+                            charger ou décharger la batterie, connecter ou non au réseau,
+                            activer la fuel cell, prioriser les charges.<br><br>
+                            <strong>Question</strong> : est-ce que l'EMS apporte une valeur mesurable ?
+                        </div>
+                    </div>
+                </div>
+                <div class="info-box mt-1">
+                    <div class="info-box-title">Objectif de la comparaison</div>
+                    <div class="card-text" style="font-size:0.8rem;">
+                        Prouver que le FIS de Prattico <strong>protège la batterie</strong> (SOC dans les limites),
+                        <strong>stabilise la tension</strong> (IEEE 1547) et <strong>réduit les coûts</strong>.
+                        C'est aussi le <strong>baseline</strong> qu'AutoResearch doit surpasser.
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- ==================== SLIDE 17: CASE A vs CASE B ==================== -->
         <div class="slide">
             <div class="content-full">
@@ -2713,104 +2342,21 @@
             </div>
         </div>
 
-        <!-- ==================== SLIDE 23: ANALYSE SOC ==================== -->
-        <div class="slide">
-            <div class="content-full">
-                <div class="slide-header">
-                    <span class="section-badge green">ANALYSE</span>
-                    <h2 class="slide-title">Analyse détaillée &mdash; Cycle de la batterie (SOC)</h2>
-                </div>
-                <div style="text-align:center; margin:0.5rem 0;">
-                    <img src="../microgrid_data/plots/fig_soc_detailed.png" style="max-width:90%; max-height:50vh; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
-                </div>
-                <div class="grid-3">
-                    <div class="card" style="padding:0.6rem;">
-                        <div class="card-title" style="font-size:0.8rem;">Phase 1 : Charge (6h-12h)</div>
-                        <div class="card-text" style="font-size:0.7rem;">Le surplus PV charge la batterie de 60% à 90%. L'EMS plafonne à 90% pour protéger la durée de vie.</div>
-                    </div>
-                    <div class="card" style="padding:0.6rem;">
-                        <div class="card-title" style="font-size:0.8rem;">Phase 2 : Plateau (12h-16h)</div>
-                        <div class="card-text" style="font-size:0.7rem;">SOC saturé à 90%. Le surplus excédentaire n'est pas stocké &mdash; il faudrait l'exporter vers le réseau.</div>
-                    </div>
-                    <div class="card" style="padding:0.6rem;">
-                        <div class="card-title" style="font-size:0.8rem;">Phase 3 : Décharge (17h-24h)</div>
-                        <div class="card-text" style="font-size:0.7rem;">Les charges résidentielles du soir (pic 50 kW) vident la batterie de 90% à 30%. L'EMS protège le plancher.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- REMOVED: Analyse détaillée — see full presentation -->
 
         <!-- ==================== SLIDE 24: ANALYSE BILAN DE PUISSANCE ==================== -->
         <div class="slide">
             <div class="content-full">
                 <div class="slide-header">
                     <span class="section-badge green">ANALYSE</span>
-                    <h2 class="slide-title">Analyse détaillée &mdash; Bilan de puissance</h2>
-                </div>
-                <div style="text-align:center; margin:0.5rem 0;">
-                    <img src="../microgrid_data/plots/fig_power_balance_detailed.png" style="max-width:90%; max-height:50vh;">
-                </div>
-                <div class="grid-2">
-                    <div class="card" style="padding:0.6rem; border-left:3px solid var(--accent-green);">
-                        <div class="card-title" style="font-size:0.8rem; color:var(--accent-green);">Surplus (zone verte, 7h-16h)</div>
-                        <div class="card-text" style="font-size:0.7rem;">La génération (PV + WT + FC) dépasse la charge. Le pic de surplus atteint ~120 kW vers midi. Ce surplus charge la batterie. Sans batterie, il serait perdu ou devrait être exporté.</div>
-                    </div>
-                    <div class="card" style="padding:0.6rem; border-left:3px solid var(--accent-red);">
-                        <div class="card-title" style="font-size:0.8rem; color:var(--accent-red);">Déficit (zone rouge, 17h-24h)</div>
-                        <div class="card-text" style="font-size:0.7rem;">Les charges dépassent la génération. Le déficit atteint ~80 kW le soir (pic résidentiel). La batterie couvre ce déficit en se déchargeant. Sans batterie, il faudrait importer du réseau.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- REMOVED: Analyse détaillée — see full presentation -->
 
         <!-- ==================== SLIDE 25: ANALYSE IMPACT EMS ==================== -->
         <div class="slide">
             <div class="content-full">
                 <div class="slide-header">
                     <span class="section-badge red">COMPARAISON</span>
-                    <h2 class="slide-title">Analyse détaillée &mdash; Impact de l'EMS sur la batterie</h2>
-                </div>
-                <div style="text-align:center; margin:0.5rem 0;">
-                    <img src="../microgrid_data/plots/fig_case_ab_detailed.png" style="max-width:90%; max-height:45vh;">
-                </div>
-                <table class="table-academic" style="font-size:0.7rem;">
-                    <thead>
-                        <tr>
-                            <th>Métrique</th>
-                            <th>Case A (sans EMS)</th>
-                            <th>Case B (avec EMS)</th>
-                            <th>Signification</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>SOC min</strong></td>
-                            <td style="color:var(--accent-red);">0% (décharge profonde)</td>
-                            <td style="color:var(--accent-green); font-weight:600;">30% (protégé)</td>
-                            <td>Pas de dégradation irréversible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>SOC max</strong></td>
-                            <td style="color:var(--accent-red);">100% (surcharge)</td>
-                            <td style="color:var(--accent-green); font-weight:600;">90% (plafonné)</td>
-                            <td>Pas de stress thermique</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Cycles DoD</strong></td>
-                            <td style="color:var(--accent-red);">100% (destructeur)</td>
-                            <td style="color:var(--accent-green); font-weight:600;">60% (modéré)</td>
-                            <td>Durée de vie &times;2 à &times;3</td>
-                        </tr>
-                        <tr>
-                            <td><strong>&Delta;V bus DC</strong></td>
-                            <td style="color:var(--accent-red);">&plusmn;5.0%</td>
-                            <td style="color:var(--accent-green); font-weight:600;">&plusmn;1.7%</td>
-                            <td>Conforme IEEE 1547 Cat II</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        <!-- REMOVED: Analyse détaillée — see full presentation -->
 
         <!-- ==================== SLIDE 26: RESULTATS CLES ==================== -->
         <div class="slide">
@@ -2867,143 +2413,14 @@
             <div class="content-full">
                 <div class="slide-header">
                     <span class="section-badge blue">DEMO</span>
-                    <h2 class="slide-title">Démonstration live MATLAB</h2>
-                </div>
-                <div class="grid-3 mt-1">
-                    <div class="card" style="padding:0.8rem; border-left:4px solid var(--accent-blue);">
-                        <div class="card-title" style="font-size:0.85rem;">1. Modèle physique Simscape (55 secondes)</div>
-                        <div class="card-text" style="font-size:0.72rem; font-family:'Fira Code', monospace;">
-                            build_phase_h &rarr; sim &rarr; validate_phase_h &rarr; <strong style="color:var(--accent-green);">18/18 PASS</strong>
-                        </div>
-                    </div>
-                    <div class="card" style="padding:0.8rem; border-left:4px solid var(--accent-purple);">
-                        <div class="card-title" style="font-size:0.85rem;">2. FIS Mamdani standalone (instantané)</div>
-                        <div class="card-text" style="font-size:0.72rem; font-family:'Fira Code', monospace;">
-                            validate_ems_fis &rarr; <strong style="color:var(--accent-green);">7/7 cas représentatifs PASS</strong>
-                        </div>
-                    </div>
-                    <div class="card" style="padding:0.8rem; border-left:4px solid var(--accent-green);">
-                        <div class="card-title" style="font-size:0.85rem;">3. Simulation 24h complète (3 secondes)</div>
-                        <div class="card-text" style="font-size:0.72rem; font-family:'Fira Code', monospace;">
-                            build_fullday &rarr; sim &rarr; validate_fullday &rarr; <strong style="color:var(--accent-green);">15/15 PASS</strong>
-                        </div>
-                    </div>
-                </div>
-                <div class="info-box mt-1">
-                    <div class="info-box-title">Note</div>
-                    <div class="card-text" style="font-size:0.75rem;">
-                        Si problème technique : les résultats sont déjà visibles dans les slides précédentes. La démo confirme que tout est reproductible.
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- REMOVED: Démonstration live MATLAB — see full presentation -->
 
         <!-- ==================== SLIDE 28: I/O + STANDARDS ==================== -->
         <div class="slide">
             <div class="content-full">
                 <div class="slide-header">
                     <span class="section-badge purple">STANDARDS</span>
-                    <h2 class="slide-title">Inputs / Outputs / Standards par composant</h2>
-                </div>
-                <p style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:0.8rem;">
-                    Chaque composant est mappe vers ses standards IEEE/IEC. Document complet :
-                    <code>IO_STANDARDS_REFERENCE.md</code> (536 lignes)
-                </p>
-                <table class="table-academic" style="font-size:0.65rem;">
-                    <thead>
-                        <tr>
-                            <th>Composant</th>
-                            <th>Inputs</th>
-                            <th>Outputs</th>
-                            <th>Équations</th>
-                            <th>Standards</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>PV 150kWp</strong></td>
-                            <td>G (W/m2), T_cell (C)</td>
-                            <td>I_pv, V_pv, P_pv, D</td>
-                            <td>Eq. 8 (single-diode), Eq. 18 (boost)</td>
-                            <td>IEC 61215, IEC 61853, IEC 61724</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Battery 200kWh</strong></td>
-                            <td>V_dc, I_bat</td>
-                            <td>SOC, V_bat, P_bat, D</td>
-                            <td>Eq. 17 (Coulomb), Eq. 18 (buck-boost)</td>
-                            <td>IEC 62619, IEEE 2030.2.1</td>
-                        </tr>
-                        <tr>
-                            <td><strong>WT 60kW</strong></td>
-                            <td>v_wind (m/s, hub 60m)</td>
-                            <td>P_wind, T_m, I_wt</td>
-                            <td>Eq. 10 (Betz), Eq. 11 (rotor)</td>
-                            <td>IEC 61400-1, IEC 61400-12-1</td>
-                        </tr>
-                        <tr>
-                            <td><strong>FC 20kW</strong></td>
-                            <td>FC_connection, p_H2</td>
-                            <td>V_FC, I_FC, P_FC</td>
-                            <td>Eq. 15 (Nernst), Eq. 16 (V_FC)</td>
-                            <td>IEC 62282-3-100</td>
-                        </tr>
-                        <tr>
-                            <td><strong>VSC 150kVA</strong></td>
-                            <td>V_dc, P_ref, Q_ref</td>
-                            <td>P, Q, THD_V, TDD</td>
-                            <td>Eq. 6-7 (dq frame)</td>
-                            <td>IEEE 1547-2018, EN 50549</td>
-                        </tr>
-                        <tr>
-                            <td><strong>EMS Fuzzy</strong></td>
-                            <td>DeltaP, SOC, Tariff</td>
-                            <td>P_ref_batt, P_ref_AC, Grid, FC</td>
-                            <td>Mamdani, max-min, centroide</td>
-                            <td>IEEE 2030.7, IEEE 2030.8</td>
-                        </tr>
-                        <tr>
-                            <td><strong>PQ Monitor</strong></td>
-                            <td>V_pcc, I_pcc, f</td>
-                            <td>DeltaV, Deltaf, THD_V, TDD</td>
-                            <td>Eq. 1-4 (FFT)</td>
-                            <td>IEEE 519, IEC 61000-4-7</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div style="margin-top:0.8rem;">
-                    <h3 style="font-size:0.85rem; color:var(--phd-primary); margin-bottom:0.4rem;">Carte des standards
-                        par couche</h3>
-                    <div class="grid-2" style="gap:0.5rem;">
-                        <div class="card" style="padding:0.6rem; border-left:3px solid var(--accent-green);">
-                            <div style="font-size:0.75rem; font-weight:600;">Couche Physique</div>
-                            <div style="font-size:0.65rem; color:var(--text-secondary);">
-                                PV: IEC 61215/61853 | Battery: IEC 62619 | WT: IEC 61400 | FC: IEC 62282
-                            </div>
-                        </div>
-                        <div class="card" style="padding:0.6rem; border-left:3px solid var(--accent-blue);">
-                            <div style="font-size:0.75rem; font-weight:600;">Couche Réseau (PCC)</div>
-                            <div style="font-size:0.65rem; color:var(--text-secondary);">
-                                IEEE 1547-2018 Cat II | EN 50549 | IEEE 519 | IEC 61000 | EN 50160
-                            </div>
-                        </div>
-                        <div class="card" style="padding:0.6rem; border-left:3px solid var(--accent-purple);">
-                            <div style="font-size:0.75rem; font-weight:600;">Couche Supervision (EMS)</div>
-                            <div style="font-size:0.65rem; color:var(--text-secondary);">
-                                IEEE 2030.7 (spec) | IEEE 2030.8 (test) | IEC 62898-1/2 (microgrids)
-                            </div>
-                        </div>
-                        <div class="card" style="padding:0.6rem; border-left:3px solid var(--accent-red);">
-                            <div style="font-size:0.75rem; font-weight:600;">Couche Découverte (AutoResearch — PhD)</div>
-                            <div style="font-size:0.65rem; color:var(--text-secondary);">
-                                Agent IA autonome découvre les EMS optimaux sous contraintes IEEE 1547
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- REMOVED: Inputs / Outputs / Standards — see full presentation -->
 
         <!-- ==================== SLIDE 22A: DONNEES VUE D'ENSEMBLE ==================== -->
         <div class="slide">
@@ -3519,6 +2936,22 @@
                         Notre simulation Simscape tourne en 3 secondes &mdash; soit <strong>1200 expériences par heure</strong>, 100&times; plus rapide que le ML training.
                     </div>
                 </div>
+                <table class="data-table mt-1" style="font-size:0.68rem;">
+                    <thead>
+                        <tr>
+                            <th style="width:30%;">Aspect</th>
+                            <th style="width:35%;">Karpathy (ML)</th>
+                            <th style="width:35%;">Notre approche (Energie)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Ce que l'agent modifie</strong></td><td>Hyperparamètres ML, architecture NN</td><td>Règles FIS, seuils SOC, fonctions d'appartenance</td></tr>
+                        <tr><td><strong>Ce qu'on mesure</strong></td><td>Accuracy, loss</td><td>Score multi-objectif : tension, SOC, coût, autoconsommation</td></tr>
+                        <tr><td><strong>Contraintes de sécurité</strong></td><td>Aucune</td><td>IEEE 1547 Cat II (violations = -1000)</td></tr>
+                        <tr><td><strong>Résultat</strong></td><td>Boîte noire (poids NN)</td><td><strong>Code lisible</strong> (règles IF-THEN)</td></tr>
+                        <tr><td><strong>Vitesse</strong></td><td>~1 exp / 5 min (training GPU)</td><td><strong>1200 exp/h</strong> (sim 3s)</td></tr>
+                    </tbody>
+                </table>
                 <div class="info-box mt-1">
                     <div class="info-box-title">Notre positionnement</div>
                     <div class="card-text" style="font-size:0.72rem;">
@@ -3569,6 +3002,113 @@
             </div>
         </div>
 
+        <!-- ==================== SLIDE: AUTORESEARCH RESULTS ==================== -->
+        <div class="slide">
+            <div class="content-full">
+                <div class="slide-header">
+                    <span class="section-badge" style="background: var(--accent-green); color: white;">RÉSULTATS</span>
+                    <h2 class="slide-title">AutoResearch &mdash; Premiers résultats (24 Mars 2026)</h2>
+                </div>
+                <div class="grid-2 mt-1">
+                    <div>
+                        <div class="card" style="padding:0.8rem; border-left:4px solid var(--accent-green);">
+                            <div style="font-size:0.85rem; font-weight:700; margin-bottom:0.4rem;">Score multi-objectif</div>
+                            <table class="data-table" style="font-size:0.72rem;">
+                                <thead>
+                                    <tr><th>Métrique</th><th>Prattico (baseline)</th><th>AutoResearch (S6)</th><th>Delta</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Score global</td><td>533.98</td><td style="color:var(--accent-green);font-weight:700;">708.55</td><td style="color:var(--accent-green);font-weight:700;">+32.7%</td></tr>
+                                    <tr><td>&Delta;V<sub>DC</sub> max</td><td>1.68%</td><td>1.39%</td><td style="color:var(--accent-green);">-17%</td></tr>
+                                    <tr><td>SOC in range</td><td>100%</td><td>100%</td><td>=</td></tr>
+                                    <tr><td>Coût journalier</td><td>82.33&euro;</td><td style="color:var(--accent-green);font-weight:700;">0.26&euro;</td><td style="color:var(--accent-green);font-weight:700;">-99.7%</td></tr>
+                                    <tr><td>Autoconsommation</td><td>71.81%</td><td>74.31%</td><td style="color:var(--accent-green);">+2.5%</td></tr>
+                                    <tr><td>Violations sécurité</td><td>0</td><td>0</td><td>=</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="warning-box mt-1">
+                            <div class="warning-box-title">Conditions expérimentales</div>
+                            <div class="card-text" style="font-size:0.68rem;">
+                                Profils : Reggio Calabria, 15 Juin (PVGIS). 24h simulées en 33s.
+                                Évaluation FIS-in-the-loop : le FIS contrôle batterie, grid et FC à chaque pas de temps.
+                                10 scénarios testés, 40+ expériences, traçabilité CSV complète.
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card" style="padding:0.8rem; border-left:4px solid var(--accent-purple);">
+                            <div style="font-size:0.85rem; font-weight:700; margin-bottom:0.4rem;">3 découvertes clés</div>
+                            <ul style="font-size:0.72rem; line-height:2.0;">
+                                <li><strong>Bug dans Prattico R13-R15</strong> : les règles DeficitLow+LowSOC
+                                    <em>déchargent</em> une batterie déjà basse. L'agent a corrigé en <strong>Idle</strong>
+                                    &rarr; préserve le SOC (+0.92 pts)</li>
+                                <li><strong>Island Mode Strategy</strong> : Grid déconnecté par défaut,
+                                    connecté uniquement en urgence (DeficitHigh).
+                                    Coût : 82&euro; &rarr; 0.26&euro; (-99.7%)</li>
+                                <li><strong>Ultra-Charge Battery</strong> : MF Charge reshapée de [-100,-100,0]
+                                    à [-100,-100,-80]. La batterie absorbe 93kW au lieu de 50kW
+                                    &rarr; maximise l'autoconsommation locale</li>
+                            </ul>
+                        </div>
+                        <div class="success-box mt-1">
+                            <div class="success-box-title">Ce que cela signifie</div>
+                            <div class="card-text" style="font-size:0.72rem;">
+                                Un agent IA (Claude Opus 4.6) a découvert en <strong>40 expériences automatisées</strong>
+                                une stratégie EMS qui surpasse le design expert de +32.7% &mdash;
+                                tout en maintenant <strong>zéro violation de sécurité IEEE 1547</strong>.
+                                Le microgrid opère en quasi-autonomie avec un coût d'import de 0.26&euro;/jour.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SLIDE: DISCOVERY PROGRESSION ==================== -->
+        <div class="slide">
+            <div class="content-full">
+                <div class="slide-header">
+                    <span class="section-badge" style="background: var(--accent-purple); color: white;">PROGRESSION</span>
+                    <h2 class="slide-title">Progression des découvertes &mdash; De 533 à 708</h2>
+                </div>
+                <table class="data-table mt-1" style="font-size:0.7rem;">
+                    <thead>
+                        <tr><th style="width:5%;">#</th><th style="width:25%;">Scénario</th><th style="width:10%;">Score</th><th style="width:10%;">Delta</th><th style="width:50%;">Modification</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0</td><td>Prattico original</td><td>533.98</td><td>&mdash;</td><td>Configuration expert humain (60 règles Mamdani, Table 3)</td></tr>
+                        <tr><td>1</td><td>Rule fix</td><td>534.90</td><td style="color:var(--accent-green);">+0.2%</td><td>DefL+LowSOC : Discharge &rarr; Idle (préserve batterie basse)</td></tr>
+                        <tr><td>2</td><td>MF reshape</td><td>542.19</td><td style="color:var(--accent-green);">+1.5%</td><td>Discharge MF : [0,100,100] &rarr; [0,50,100] (décharge modérée)</td></tr>
+                        <tr style="background:#f0fdf4;"><td>3</td><td><strong>Island Mode</strong></td><td><strong>695.37</strong></td><td style="color:var(--accent-green);font-weight:700;">+30.2%</td><td>Grid déconnecté + FC ON en déficit + 15 règles modifiées</td></tr>
+                        <tr><td>4</td><td>Grid enforced</td><td>701.55</td><td style="color:var(--accent-green);">+31.4%</td><td>Bug fix : Grid_conn FIS output effectivement utilisé dans l'évaluation</td></tr>
+                        <tr style="background:#ecfdf5;"><td><strong>5</strong></td><td><strong>S6 Final</strong></td><td style="font-weight:900;color:var(--accent-green);">708.55</td><td style="color:var(--accent-green);font-weight:900;">+32.7%</td><td>Ultra-Charge [-100,-100,-80] + Grid OFF sauf urgence + FC ON</td></tr>
+                    </tbody>
+                </table>
+                <div class="grid-2 mt-1">
+                    <div class="info-box">
+                        <div class="info-box-title">Méthodologie AutoResearch</div>
+                        <div class="card-text" style="font-size:0.68rem;">
+                            <strong>Approche structurée</strong> : l'agent spécifie (règle, colonne, valeur) &mdash;
+                            le code Python fait le remplacement exact. Taux de succès : <strong>100%</strong>
+                            (vs 25% avec l'approche text-based initiale).<br>
+                            <strong>Modèle</strong> : Claude Opus 4.6 &mdash; Sonnet 4 pour l'exploration initiale,
+                            Opus 4.6 pour les modifications structurelles.
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box-title">Reproductibilité</div>
+                        <div class="card-text" style="font-size:0.68rem;">
+                            Chaque expérience est loggée dans un CSV (13 champs) : ID, timestamp,
+                            hypothèse en langage naturel, fichier modifié, 5 métriques, score, décision
+                            (accepté/rejeté), durée, erreur.<br>
+                            Code source : <a href="https://github.com/akiroussama/phd_microgrid" target="_blank">github.com/akiroussama/phd_microgrid</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- ==================== SLIDE 27: CONCLUSION ==================== -->
         <div class="slide">
             <div class="content-full text-center">
@@ -3590,10 +3130,10 @@
                         </div>
                     </div>
                     <div class="card" style="border-left: 4px solid var(--accent-green);">
-                        <div class="card-title"><span class="status-pass">[OK]</span> Direction AutoResearch</div>
+                        <div class="card-title"><span class="status-pass">[OK]</span> AutoResearch : +32.7%</div>
                         <div class="card-text">
-                            Proposition d'approche AutoResearch pour la recherche autonome de configurations EMS
-                            optimales.
+                            40 expériences autonomes. Score : 708.55 vs 533.98 baseline.
+                            Coût : -99.7%. Zéro violation. Island Mode découvert par l'IA.
                         </div>
                     </div>
                 </div>
@@ -3601,7 +3141,7 @@
                     <div class="success-box-title" style="text-align:center; font-size:1rem;">Principe directeur</div>
                     <div class="card-text"
                         style="text-align:center; font-size:1rem; font-weight:600; color:var(--phd-primary);">
-                        "Reproduire d'abord, innover ensuite."
+                        "Reproduire d'abord, innover ensuite." &mdash; Résultat : +32.7% vs expert humain.
                     </div>
                 </div>
                 <div style="margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.85rem;">
