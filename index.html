@@ -1585,6 +1585,81 @@
             </div>
         </div>
 
+        <!-- ==================== SLIDE: METHODOLOGIE CONSTRUCTION ==================== -->
+        <div class="slide">
+            <div class="content-full">
+                <div class="slide-header">
+                    <span class="section-badge" style="background:var(--accent-blue); color:white;">MÉTHODE</span>
+                    <h2 class="slide-title">Comment j'ai construit le modèle Simscape</h2>
+                </div>
+                <div class="grid-2" style="gap:1.2rem;">
+                    <div>
+                        <div class="card" style="border-left:4px solid var(--accent-blue); padding:0.8rem; margin-bottom:0.8rem;">
+                            <div class="card-title" style="color:var(--accent-blue);">Phase 1 &mdash; Exploration des blocs</div>
+                            <div class="card-text" style="font-size:0.75rem; line-height:1.8;">
+                                J'ai commencé par explorer la <strong>Library Browser</strong> de Simscape Electrical.
+                                Les composants sont des <strong>blocs prêts à l'emploi</strong> &mdash;
+                                Solar Cell, Battery, Controlled Current Source &mdash; fournis par MathWorks.
+                                J'ai testé les configurations en drag-and-drop pour comprendre les I/O.
+                            </div>
+                        </div>
+                        <div class="card" style="border-left:4px solid var(--accent-green); padding:0.8rem; margin-bottom:0.8rem;">
+                            <div class="card-title" style="color:var(--accent-green);">Phase 2 &mdash; Scriptage (industrialisation)</div>
+                            <div class="card-text" style="font-size:0.75rem; line-height:1.8;">
+                                Une fois que ça fonctionnait, j'ai <strong>scripté la construction</strong> pour :
+                                <strong>reproductibilité</strong> (n'importe qui lance le script &rarr; même modèle),
+                                <strong>versioning Git</strong> (chaque modification est un commit),
+                                <strong>paramétrisation</strong> (changer une valeur &rarr; rebuild automatique).
+                            </div>
+                        </div>
+                        <div class="card" style="border-left:4px solid var(--accent-purple); padding:0.8rem;">
+                            <div class="card-title" style="color:var(--accent-purple);">Phase 3 &mdash; Validation automatisée</div>
+                            <div class="card-text" style="font-size:0.75rem; line-height:1.8;">
+                                Chaque phase (B &rarr; H) a ses <strong>tests automatisés</strong>.
+                                106 tests au total. Le script build + simule + valide en une commande.
+                                C'est cette automatisation qui rend <strong>AutoResearch possible</strong>.
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card" style="background:#1e293b; padding:0.8rem; border-radius:8px;">
+                            <div style="color:#94a3b8; font-size:0.65rem; margin-bottom:0.5rem;">
+                                build_pv_system.m &mdash; Extrait du script de construction PV
+                            </div>
+                            <pre style="color:#e2e8f0; font-family:'Fira Code',monospace; font-size:0.62rem; line-height:1.7; margin:0; white-space:pre-wrap;"><span style="color:#86efac;">% Bloc Solar Cell natif Simscape (prêt à l'emploi)</span>
+add_block(<span style="color:#fde68a;">'simscape/Electrical/Semiconductors/Solar Cell'</span>, ...
+    [mdl <span style="color:#fde68a;">'/PV_Array'</span>]);
+
+<span style="color:#86efac;">% Configuration : 864 cellules × 23 strings = 150 kWp</span>
+set_param([mdl <span style="color:#fde68a;">'/PV_Array'</span>], ...
+    <span style="color:#fde68a;">'N_series'</span>,   <span style="color:#7dd3fc;">'864'</span>, ...
+    <span style="color:#fde68a;">'N_parallel'</span>, <span style="color:#7dd3fc;">'23'</span>);
+
+<span style="color:#86efac;">% Boost Converter (blocs Simscape standard)</span>
+add_block(<span style="color:#fde68a;">'simscape/Electrical/Semiconductors/IGBT'</span>, ...
+    [mdl <span style="color:#fde68a;">'/Boost_IGBT'</span>]);
+add_block(<span style="color:#fde68a;">'simscape/Electrical/Semiconductors/Diode'</span>, ...
+    [mdl <span style="color:#fde68a;">'/Boost_Diode'</span>]);
+add_block(<span style="color:#fde68a;">'simscape/Electrical/Passive/Inductor'</span>, ...
+    [mdl <span style="color:#fde68a;">'/Boost_L'</span>]);
+
+<span style="color:#86efac;">% Connexion au bus DC 750V</span>
+add_line(mdl, <span style="color:#fde68a;">'Boost_out/1'</span>, <span style="color:#fde68a;">'DC_Plus/1'</span>);</pre>
+                        </div>
+                        <div class="info-box mt-1">
+                            <div class="info-box-title">Transparence</div>
+                            <div class="card-text" style="font-size:0.72rem;">
+                                Tous les scripts sont dans le dépôt public :
+                                <code>simscape_opus_46/scripts/build_*.m</code><br>
+                                Le <code>.slx</code> est le résultat. Les scripts sont la recette.
+                                Les deux sont partagés pour la <strong>reproductibilité scientifique</strong>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- ==================== SLIDE: PV_System — Comment je l'ai construit ==================== -->
         <div class="slide">
             <div class="content-full">
@@ -2628,6 +2703,75 @@
                         avec la <strong>puissance de l'exploration autonome</strong> (1000+ configurations testées en une nuit),
                         le tout validé sur un <strong>plant physique Simscape</strong> (pas un toy environment) avec
                         <strong>conformité IEEE 1547</strong> garantie à chaque expérience.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SLIDE: AUTORESEARCH vs HYPERPARAMETER TUNING ==================== -->
+        <div class="slide">
+            <div class="content-full">
+                <div class="slide-header">
+                    <span class="section-badge" style="background:var(--accent-purple); color:white;">COMPARAISON</span>
+                    <h2 class="slide-title">AutoResearch vs Hyperparameter Tuning (GA-FIS, PSO)</h2>
+                </div>
+                <table class="data-table mt-1" style="font-size:0.7rem;">
+                    <thead>
+                        <tr>
+                            <th style="width:22%;">Aspect</th>
+                            <th style="width:39%;">Hyperparameter Tuning (GA-FIS, PSO)</th>
+                            <th style="width:39%;">AutoResearch (LLM Agent)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ce qu'on modifie</strong></td>
+                            <td>Les <strong>sommets des triangles</strong> (nombres)<br>Ex: SOC_low_upper = 45 &rarr; 52</td>
+                            <td>Les <strong>sorties des règles</strong> (décisions)<br>Ex: Discharge &rarr; Idle quand SOC bas</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Espace de recherche</strong></td>
+                            <td>Continu, fixé par l'humain<br>~14 paramètres réels</td>
+                            <td>Mixte : 60 règles &times; 4 sorties (discret)<br>+ vertices MF (continu) = 10 000+ options</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Type de modification</strong></td>
+                            <td><strong>Aléatoire</strong> (mutation/croisement)<br>Pas de compréhension du problème</td>
+                            <td><strong>Sémantique</strong> : "ne pas décharger une batterie vide"<br>L'agent <em>raisonne</em> sur la physique</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Peut changer le mode opératoire ?</strong></td>
+                            <td style="color:var(--accent-red);"><strong>NON</strong><br>Grid ON/OFF n'est pas un paramètre MF</td>
+                            <td style="color:var(--accent-green);"><strong>OUI</strong><br>Island Mode découvert (grid OFF par défaut)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Interprétabilité</strong></td>
+                            <td>Vecteur de nombres<br>"[52, 70, 0.09, ...]" &mdash; pourquoi ?</td>
+                            <td>Hypothèse en langage naturel<br>"SOC bas + déficit &rarr; idle pour préserver"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bug R13-R15 de Prattico</strong></td>
+                            <td style="color:var(--accent-red);">Ne peut pas le trouver<br>(les sorties de règles sont hors-scope)</td>
+                            <td style="color:var(--accent-green);">L'a identifié et corrigé<br>(Discharge &rarr; Idle)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="grid-2 mt-1">
+                    <div class="warning-box">
+                        <div class="warning-box-title">Ce qui reste à prouver</div>
+                        <div class="card-text" style="font-size:0.72rem;">
+                            La comparaison quantitative GA vs LLM est <strong>prévue en avril</strong>.
+                            Si le GA fait aussi bien sur les modifications paramétriques,
+                            la contribution se repositionne sur les modifications <strong>structurelles</strong>
+                            (sorties de règles, mode opératoire) que seul le LLM peut faire.
+                        </div>
+                    </div>
+                    <div class="success-box">
+                        <div class="success-box-title">Le mot clé</div>
+                        <div class="card-text" style="font-size:0.8rem; text-align:center; font-weight:600;">
+                            GA = modification <strong>aléatoire</strong> de nombres<br>
+                            AutoResearch = modification <strong>sémantique</strong> de décisions
+                        </div>
                     </div>
                 </div>
             </div>
