@@ -1203,6 +1203,9 @@
                                 40 expériences autonomes, 10 scénarios testés.
                                 <strong>Résultat : +32.7% vs Prattico</strong> (score 708.55 vs 533.98).
                                 Coût réduit de 99.7%. Zéro violation. Island Mode découvert par l'IA.
+                                <br><span style="font-size:0.7rem; color:var(--accent-orange);">
+                                NB : Le +32.7% provient d'un changement de mode opératoire (Island Mode).
+                                Comparaison grid-connected : +1.5% (542.19).</span>
                             </div>
                         </div>
                     </div>
@@ -1436,12 +1439,12 @@
                                 </div>
                                 <div style="display: flex; flex-direction: column; align-items: center;">
                                     <div class="arch-arrow">&#8597;</div>
-                                    <div class="arch-box orange" style="font-size: 0.7rem; padding: 0.4rem;">FC<br>18kW
+                                    <div class="arch-box orange" style="font-size: 0.7rem; padding: 0.4rem;">FC<br>20kW
                                     </div>
                                 </div>
                                 <div style="display: flex; flex-direction: column; align-items: center;">
                                     <div class="arch-arrow">&#8597;</div>
-                                    <div class="arch-box orange" style="font-size: 0.7rem; padding: 0.4rem;">WT<br>55kW
+                                    <div class="arch-box orange" style="font-size: 0.7rem; padding: 0.4rem;">WT<br>60kW
                                     </div>
                                 </div>
                                 <div style="display: flex; flex-direction: column; align-items: center;">
@@ -1496,7 +1499,7 @@
                     <h2 class="slide-title">Notre modèle Simscape &mdash; Vue d'ensemble</h2>
                 </div>
                 <div style="text-align:center; margin:1rem 0;">
-                    <img src="docs/simscapeClear.png" alt="Modèle Simscape Prattico"
+                    <img src="simscapeClear.png" alt="Modèle Simscape Prattico"
                          style="max-width:95%; max-height:420px; border:2px solid var(--glass-border); border-radius:8px; box-shadow: var(--shadow-lg);">
                 </div>
                 <div class="info-box" style="max-width:800px; margin:0 auto;">
@@ -1543,7 +1546,7 @@
                     <!-- Row 2: FC (left) — (center empty/EMS) — VSC + Load (right) -->
                     <div style="background:#fffbeb; border:2px solid #f59e0b; padding:0.5rem; border-radius:8px;">
                         <strong style="color:#f59e0b; font-size:0.75rem;">FC_System</strong><br>
-                        Pile à combustible PEMFC 18 kW<br>
+                        Pile à combustible PEMFC 20 kW (18 kW impl.)<br>
                         ON/OFF commandé par EMS<br>
                         <span style="color:#f59e0b;">&marker; Average-value</span>
                     </div>
@@ -1592,9 +1595,9 @@
                 <div class="grid-2" style="gap:1.2rem;">
                     <div style="text-align:center;">
                         <div style="background:#f8fafc; border:2px dashed #cbd5e1; border-radius:8px; padding:2rem; min-height:250px; display:flex; align-items:center; justify-content:center;">
-                            <img src="docs/pv_system_inside.png" alt="PV_System inside"
+                            <img src="pv_system_inside.png" alt="PV_System inside"
                                  style="max-width:100%; max-height:250px; border-radius:4px;"
-                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.9rem;>Screenshot &agrave; ajouter :<br><code>docs/pv_system_inside.png</code></div>';">
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.9rem;>Screenshot &agrave; ajouter :<br><code>pv_system_inside.png</code></div>';">
                         </div>
                     </div>
                     <div>
@@ -1631,9 +1634,9 @@
                 <div class="grid-2" style="gap:1.2rem;">
                     <div style="text-align:center;">
                         <div style="background:#f8fafc; border:2px dashed #cbd5e1; border-radius:8px; padding:2rem; min-height:250px; display:flex; align-items:center; justify-content:center;">
-                            <img src="docs/battery_system_inside.png" alt="Battery_System inside"
+                            <img src="battery_system_inside.png" alt="Battery_System inside"
                                  style="max-width:100%; max-height:250px; border-radius:4px;"
-                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.9rem;>Screenshot &agrave; ajouter :<br><code>docs/battery_system_inside.png</code></div>';">
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.9rem;>Screenshot &agrave; ajouter :<br><code>battery_system_inside.png</code></div>';">
                         </div>
                     </div>
                     <div>
@@ -1670,9 +1673,9 @@
                 <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:0.8rem;">
                     <div>
                         <div style="background:#f8fafc; border:2px dashed #cbd5e1; border-radius:8px; padding:1rem; min-height:150px; display:flex; align-items:center; justify-content:center; margin-bottom:0.6rem;">
-                            <img src="docs/wt_system_inside.png" alt="WT inside"
+                            <img src="wt_system_inside.png" alt="WT inside"
                                  style="max-width:100%; max-height:140px; border-radius:4px;"
-                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.75rem;><code>docs/wt_system_inside.png</code></div>';">
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.75rem;><code>wt_system_inside.png</code></div>';">
                         </div>
                         <div class="card" style="border-left:3px solid #f59e0b; padding:0.6rem;">
                             <div class="card-title" style="font-size:0.8rem; color:#f59e0b;">WT_System (60 kW)</div>
@@ -1686,25 +1689,25 @@
                     </div>
                     <div>
                         <div style="background:#f8fafc; border:2px dashed #cbd5e1; border-radius:8px; padding:1rem; min-height:150px; display:flex; align-items:center; justify-content:center; margin-bottom:0.6rem;">
-                            <img src="docs/fc_system_inside.png" alt="FC inside"
+                            <img src="fc_system_inside.png" alt="FC inside"
                                  style="max-width:100%; max-height:140px; border-radius:4px;"
-                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.75rem;><code>docs/fc_system_inside.png</code></div>';">
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.75rem;><code>fc_system_inside.png</code></div>';">
                         </div>
                         <div class="card" style="border-left:3px solid #f59e0b; padding:0.6rem;">
-                            <div class="card-title" style="font-size:0.8rem; color:#f59e0b;">FC_System (18 kW)</div>
+                            <div class="card-title" style="font-size:0.8rem; color:#f59e0b;">FC_System (20 kW nominal)</div>
                             <ul style="font-size:0.65rem; line-height:1.8; margin:0; padding-left:1rem;">
                                 <li>Bloc <strong>Controlled Current Source</strong></li>
                                 <li>Commande ON/OFF par signal <code>FC_cmd</code> du EMS</li>
-                                <li>18 kW constant quand activée</li>
+                                <li>20 kW nominal (18 kW dans notre impl.)</li>
                                 <li><em>Backup pour les déficits importants</em></li>
                             </ul>
                         </div>
                     </div>
                     <div>
                         <div style="background:#f8fafc; border:2px dashed #cbd5e1; border-radius:8px; padding:1rem; min-height:150px; display:flex; align-items:center; justify-content:center; margin-bottom:0.6rem;">
-                            <img src="docs/vsc_system_inside.png" alt="VSC inside"
+                            <img src="vsc_system_inside.png" alt="VSC inside"
                                  style="max-width:100%; max-height:140px; border-radius:4px;"
-                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.75rem;><code>docs/vsc_system_inside.png</code></div>';">
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=color:#94a3b8;font-size:0.75rem;><code>vsc_system_inside.png</code></div>';">
                         </div>
                         <div class="card" style="border-left:3px solid #f59e0b; padding:0.6rem;">
                             <div class="card-title" style="font-size:0.8rem; color:#f59e0b;">VSC_System (150 kVA)</div>
@@ -2344,345 +2347,11 @@
 
         <!-- REMOVED: Analyse détaillée — see full presentation -->
 
-        <!-- ==================== SLIDE 24: ANALYSE BILAN DE PUISSANCE ==================== -->
-        <div class="slide">
-            <div class="content-full">
-                <div class="slide-header">
-                    <span class="section-badge green">ANALYSE</span>
-        <!-- REMOVED: Analyse détaillée — see full presentation -->
+        <!-- SLIDES 24-25 (Analyse détaillée) removed — see full presentation -->
 
-        <!-- ==================== SLIDE 25: ANALYSE IMPACT EMS ==================== -->
-        <div class="slide">
-            <div class="content-full">
-                <div class="slide-header">
-                    <span class="section-badge red">COMPARAISON</span>
-        <!-- REMOVED: Analyse détaillée — see full presentation -->
+        <!-- REMOVED: sultats cl — see full presentation -->
 
-        <!-- ==================== SLIDE 26: RESULTATS CLES ==================== -->
-        <div class="slide">
-            <div class="content-full">
-                <div class="slide-header">
-                    <span class="section-badge green">RÉSULTATS</span>
-                    <h2 class="slide-title">Résultats clés</h2>
-                </div>
-                <div class="grid-5">
-                    <div class="metric-card">
-                        <div class="metric-value">750V</div>
-                        <div class="metric-label">V<sub>DC</sub> bus<br>&plusmn;0.07% stable</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-value">59 kW</div>
-                        <div class="metric-label">PV pic<br>(a 1000 W/m2)</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-value">55 kW</div>
-                        <div class="metric-label">WT pic<br>(a 12 m/s)</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-value">18 kW</div>
-                        <div class="metric-label">FC nominale<br>PEMFC</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-value">30&ndash;90%</div>
-                        <div class="metric-label">SOC batterie<br>dans les bornes</div>
-                    </div>
-                </div>
-                <div class="grid-2 mt-2">
-                    <div class="card">
-                        <div class="card-title">Stabilite du bus DC</div>
-                        <div class="card-text">
-                            La tension du bus DC reste à 750V &plusmn;0.07% en regime permanent.
-                            Les transitoires lors de l'ajout/retrait de composants sont amortis en &lt; 50 ms.
-                            Le bus est robuste aux variations de charge et de production.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-title">Comportement énergétique</div>
-                        <div class="card-text">
-                            La batterie absorbe les surplus et comble les déficits.
-                            Le SOC évolue naturellement entre 30% et 90% sur 24h.
-                            La coordination PV/WT/FC/Batt est coherente avec les règles FIS.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ==================== SLIDE 27: DEMO LIVE ==================== -->
-        <div class="slide">
-            <div class="content-full">
-                <div class="slide-header">
-                    <span class="section-badge blue">DEMO</span>
-        <!-- REMOVED: Démonstration live MATLAB — see full presentation -->
-
-        <!-- ==================== SLIDE 28: I/O + STANDARDS ==================== -->
-        <div class="slide">
-            <div class="content-full">
-                <div class="slide-header">
-                    <span class="section-badge purple">STANDARDS</span>
-        <!-- REMOVED: Inputs / Outputs / Standards — see full presentation -->
-
-        <!-- ==================== SLIDE 22A: DONNEES VUE D'ENSEMBLE ==================== -->
-        <div class="slide">
-            <div class="content-full">
-                <div class="slide-header">
-                    <span class="section-badge blue">DONN&Eacute;ES</span>
-                    <h2 class="slide-title">Donn&eacute;es disponibles &mdash; 13 sources identifi&eacute;es</h2>
-                </div>
-                <table class="table-academic" style="font-size:0.62rem;">
-                    <thead>
-                        <tr>
-                            <th>Donn&eacute;e</th>
-                            <th>Source</th>
-                            <th>Format</th>
-                            <th>Volume</th>
-                            <th>Standard</th>
-                            <th>Statut</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Irradiance PV</strong></td>
-                            <td>PVGIS (JRC EU) &mdash; Reggio Calabria</td>
-                            <td>CSV</td>
-                            <td>8 760 pts/an</td>
-                            <td>IEC 61724</td>
-                            <td><span class="status-pass">T&eacute;l&eacute;charg&eacute;</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>TMY complet</strong></td>
-                            <td>PVGIS TMY generator</td>
-                            <td>CSV</td>
-                            <td>8 790 pts</td>
-                            <td>IEC 61724</td>
-                            <td><span class="status-pass">T&eacute;l&eacute;charg&eacute;</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Vent (hub 60m)</strong></td>
-                            <td>PVGIS + correction IEC 61400-1</td>
-                            <td>CSV</td>
-                            <td>8 760 pts</td>
-                            <td>IEC 61400-1</td>
-                            <td><span class="status-pass">Corrig&eacute;</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>T cellule PV</strong></td>
-                            <td>Calcul NOCT (T_amb + 0.031&times;G)</td>
-                            <td>CSV</td>
-                            <td>8 760 pts</td>
-                            <td>IEC 61215</td>
-                            <td><span class="status-pass">Calcul&eacute;</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Tarif &eacute;lectricit&eacute;</strong></td>
-                            <td>ARERA bandes F1/F2/F3</td>
-                            <td>CSV</td>
-                            <td>720 pts (30j)</td>
-                            <td>ARERA 654/2023</td>
-                            <td><span class="status-pass">T&eacute;l&eacute;charg&eacute;</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Charges calibr&eacute;es</strong></td>
-                            <td>Prattico Fig.10 + ISTAT + variabilit&eacute;</td>
-                            <td>CSV</td>
-                            <td>720 pts (30j)</td>
-                            <td>EN 50160</td>
-                            <td><span class="status-pass">G&eacute;n&eacute;r&eacute;</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Courbe OCV(SOC)</strong></td>
-                            <td>CALCE + Baronti (2013)</td>
-                            <td>CSV</td>
-                            <td>21 pts</td>
-                            <td>IEC 62619</td>
-                            <td><span class="status-pass">Disponible</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Courbe V-I FC</strong></td>
-                            <td>OPEM simulator</td>
-                            <td>CSV</td>
-                            <td>17 pts</td>
-                            <td>IEC 62282</td>
-                            <td><span class="status-pass">Disponible</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Microgrid r&eacute;el</strong></td>
-                            <td>Mesa Del Sol (Kaggle)</td>
-                            <td>CSV</td>
-                            <td>13 mois, 10s</td>
-                            <td>&mdash;</td>
-                            <td><span class="status-warn">R&eacute;f&eacute;rence</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Benchmark EMS</strong></td>
-                            <td>EMSx (70 sites industriels)</td>
-                            <td>CSV</td>
-                            <td>Multi-sites</td>
-                            <td>&mdash;</td>
-                            <td><span class="status-warn">R&eacute;f&eacute;rence</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Benchmark r&eacute;seau</strong></td>
-                            <td>SimBench (topologies EU)</td>
-                            <td>Multi</td>
-                            <td>Annuel</td>
-                            <td>&mdash;</td>
-                            <td><span class="status-warn">R&eacute;f&eacute;rence</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Communaut&eacute; &eacute;nergie</strong></td>
-                            <td>Zenodo (250 m&eacute;nages, PV+batt)</td>
-                            <td>CSV</td>
-                            <td>Annuel</td>
-                            <td>&mdash;</td>
-                            <td><span class="status-warn">R&eacute;f&eacute;rence</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Prix spot march&eacute;</strong></td>
-                            <td>GME / ENTSO-E</td>
-                            <td>API</td>
-                            <td>Horaire</td>
-                            <td>EU reg.</td>
-                            <td><span class="status-fail">&Agrave; t&eacute;l&eacute;charger</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="success-box mt-1">
-                    <div class="success-box-title">Bilan</div>
-                    <div class="card-text" style="font-size:0.7rem;">11 fichiers CSV t&eacute;l&eacute;charg&eacute;s (1.4 MB), 2 &agrave; compl&eacute;ter (GME prix spot, Terna charges r&eacute;elles).</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ==================== SLIDE 22B: EXEMPLE IRRADIANCE ==================== -->
-        <div class="slide">
-            <div class="content-full">
-                <div class="slide-header">
-                    <span class="section-badge green">EXEMPLE</span>
-                    <h2 class="slide-title">Exemple &mdash; Irradiance solaire, 15 juin 2019, Reggio Calabria</h2>
-                </div>
-                <table class="table-academic" style="font-size:0.72rem;">
-                    <thead>
-                        <tr>
-                            <th>Heure</th>
-                            <th>Irradiance (W/m&sup2;)</th>
-                            <th>Vent 10m (m/s)</th>
-                            <th>Vent 60m (m/s)</th>
-                            <th>T amb (&deg;C)</th>
-                            <th>T cellule (&deg;C)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>0h</strong></td>
-                            <td>0</td>
-                            <td>2.44</td>
-                            <td>3.14</td>
-                            <td>18.6</td>
-                            <td>18.6</td>
-                        </tr>
-                        <tr>
-                            <td><strong>6h</strong></td>
-                            <td>277</td>
-                            <td>1.73</td>
-                            <td>2.22</td>
-                            <td>19.5</td>
-                            <td>28.2</td>
-                        </tr>
-                        <tr>
-                            <td><strong>9h</strong></td>
-                            <td>814</td>
-                            <td>1.51</td>
-                            <td>1.94</td>
-                            <td>22.5</td>
-                            <td>47.9</td>
-                        </tr>
-                        <tr>
-                            <td><strong>12h</strong></td>
-                            <td>966</td>
-                            <td>1.13</td>
-                            <td>1.45</td>
-                            <td>23.5</td>
-                            <td>53.7</td>
-                        </tr>
-                        <tr>
-                            <td><strong>15h</strong></td>
-                            <td>658</td>
-                            <td>1.11</td>
-                            <td>1.43</td>
-                            <td>23.6</td>
-                            <td>44.2</td>
-                        </tr>
-                        <tr>
-                            <td><strong>18h</strong></td>
-                            <td>82</td>
-                            <td>0.92</td>
-                            <td>1.18</td>
-                            <td>22.5</td>
-                            <td>25.1</td>
-                        </tr>
-                        <tr>
-                            <td><strong>21h</strong></td>
-                            <td>0</td>
-                            <td>1.84</td>
-                            <td>2.37</td>
-                            <td>20.0</td>
-                            <td>20.0</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="grid-2 mt-1">
-                    <div class="card" style="padding:0.7rem; border-left:3px solid var(--accent-green);">
-                        <div class="card-title" style="color:var(--accent-green); font-size:0.85rem;">Validation crois&eacute;e</div>
-                        <ul style="font-size:0.7rem; color:var(--text-secondary); padding-left:1rem; line-height:1.6;">
-                            <li>Pic PVGIS : 966 W/m&sup2; &mdash; confirme le papier (~1000 W/m&sup2;)</li>
-                            <li>Vent corrig&eacute; : facteur &times;1.29 (IEC 61400-1, &alpha;=0.14)</li>
-                            <li>T cellule : +30&deg;C par rapport &agrave; l'ambiant au pic</li>
-                        </ul>
-                    </div>
-                    <div class="card" style="padding:0.7rem; border-left:3px solid var(--accent-orange);">
-                        <div class="card-title" style="color:var(--accent-orange); font-size:0.85rem;">Ce qu'il manque encore</div>
-                        <ul style="font-size:0.7rem; color:var(--text-secondary); padding-left:1rem; line-height:1.6;">
-                            <li>Prix spot GME zone CALA (n&eacute;cessite API mercati-energetici)</li>
-                            <li>Charges r&eacute;elles Terna Calabre (n&eacute;cessite API REST)</li>
-                            <li>Donn&eacute;es microgrid mesur&eacute; pour validation crois&eacute;e (Mesa Del Sol identifi&eacute;)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ==================== SLIDE 22C: OBJECTIF DES DONNEES ==================== -->
-        <div class="slide">
-            <div class="content-full">
-                <div class="slide-header">
-                    <span class="section-badge purple">OBJECTIF</span>
-                    <h2 class="slide-title">Pourquoi ces donn&eacute;es &mdash; Validation, calibration, g&eacute;n&eacute;ralisation</h2>
-                </div>
-                <div class="card mt-1" style="padding:0.8rem; border-left:4px solid var(--accent-green);">
-                    <div class="card-title" style="color:var(--accent-green); font-size:0.9rem;">Validation</div>
-                    <div class="card-text" style="font-size:0.75rem;">
-                        V&eacute;rifier que nos profils digitalis&eacute;s (Fig. 9, 10, 13 du papier) sont coh&eacute;rents avec la r&eacute;alit&eacute;. Le pic PVGIS de 966 W/m&sup2; confirme les ~1000 W/m&sup2; du papier. Les bandes ARERA (0.07-0.12 &euro;/kWh) encadrent le profil papier (0.05-0.15 &euro;/kWh).
-                    </div>
-                </div>
-                <div class="card mt-1" style="padding:0.8rem; border-left:4px solid var(--accent-blue);">
-                    <div class="card-title" style="color:var(--accent-blue); font-size:0.9rem;">Calibration</div>
-                    <div class="card-text" style="font-size:0.75rem;">
-                        Remplacer les profils digitalis&eacute;s (approximation visuelle des figures) par des donn&eacute;es instrumentales. PVGIS fournit des mesures satellite toutes les heures, pas une lecture manuelle d'un graphique. C'est la diff&eacute;rence entre une estimation et une mesure.
-                    </div>
-                </div>
-                <div class="card mt-1" style="padding:0.8rem; border-left:4px solid var(--accent-purple);">
-                    <div class="card-title" style="color:var(--accent-purple); font-size:0.9rem;">G&eacute;n&eacute;ralisation (AutoResearch)</div>
-                    <div class="card-text" style="font-size:0.75rem;">
-                        Tester l'EMS d&eacute;couvert par l'agent sur des conditions NON VUES. Le TMY PVGIS fournit 12 mois &mdash; l'agent optimise sur juin, on valide sur d&eacute;cembre. Si les am&eacute;liorations g&eacute;n&eacute;ralisent, la contribution est robuste. Si elles ne g&eacute;n&eacute;ralisent pas, on le documente honn&ecirc;tement.
-                    </div>
-                </div>
-                <div class="warning-box mt-1">
-                    <div class="warning-box-title">Attention</div>
-                    <div class="card-text" style="font-size:0.7rem;">Sans donn&eacute;es r&eacute;elles, les r&eacute;sultats restent des simulations. La validation crois&eacute;e avec Mesa Del Sol (microgrid r&eacute;el instrument&eacute;, 13 mois) est pr&eacute;vue comme prochaine &eacute;tape.</div>
-                </div>
-            </div>
-        </div>
+        <!-- REMOVED: Exemple — see full presentation -->
 
         <!-- ==================== SLIDE 23: ROADMAP THESE ==================== -->
         <div class="slide">
@@ -3002,6 +2671,83 @@
             </div>
         </div>
 
+        <!-- ==================== SLIDE: SCORE FORMULA ==================== -->
+        <div class="slide">
+            <div class="content-full">
+                <div class="slide-header">
+                    <span class="section-badge" style="background: var(--accent-purple); color: white;">MÉTHODE</span>
+                    <h2 class="slide-title">Score multi-objectif &mdash; Comment on mesure la performance</h2>
+                </div>
+
+                <div class="formula-block mt-1" data-label="Score multi-objectif">
+                    <span style="font-size:1.1rem; letter-spacing:0.02em;">
+                        <strong>Score</strong> = &minus;10 &times; &Delta;V<sub>max</sub>
+                        + 5 &times; SOC<sub>in_range</sub>
+                        + 3 &times; self_consumption
+                        &minus; 2 &times; daily_cost
+                        &minus; 1000 &times; violations
+                    </span>
+                </div>
+
+                <table class="data-table mt-1" style="font-size:0.72rem;">
+                    <thead>
+                        <tr>
+                            <th style="width:22%;">Métrique</th>
+                            <th style="width:10%;">Poids</th>
+                            <th style="width:40%;">Signification</th>
+                            <th style="width:28%;">Objectif</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>&Delta;V<sub>max</sub></strong> (%)</td>
+                            <td style="color:var(--accent-red); font-weight:700;">&minus;10</td>
+                            <td>Max déviation tension DC vs 750V</td>
+                            <td>Minimiser</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SOC<sub>in_range</sub></strong> (%)</td>
+                            <td style="color:var(--accent-green); font-weight:700;">+5</td>
+                            <td>% du temps SOC dans [30&ndash;90%]</td>
+                            <td>Maximiser (100%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>self_consumption</strong> (%)</td>
+                            <td style="color:var(--accent-green); font-weight:700;">+3</td>
+                            <td>% génération consommée localement</td>
+                            <td>Maximiser</td>
+                        </tr>
+                        <tr>
+                            <td><strong>daily_cost</strong> (EUR)</td>
+                            <td style="color:var(--accent-red); font-weight:700;">&minus;2</td>
+                            <td>Coût import réseau &times; tarif</td>
+                            <td>Minimiser</td>
+                        </tr>
+                        <tr>
+                            <td><strong>safety_violations</strong></td>
+                            <td style="color:var(--accent-red); font-weight:700;">&minus;1000</td>
+                            <td>Nb dépassements IEEE 1547</td>
+                            <td style="font-weight:700; color:var(--accent-red);">ZERO</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box mt-1">
+                    <div class="info-box-title">Choix de design</div>
+                    <div class="card-text" style="font-size:0.72rem;">
+                        Les poids sont un choix de design initial. Le <strong>&minus;1000</strong> pour les violations est un <strong>hard constraint</strong> : toute violation de sécurité rend le score fortement négatif. Une analyse de sensibilité des poids est prévue.
+                    </div>
+                </div>
+
+                <div class="warning-box mt-1">
+                    <div class="warning-box-title">Limitation connue</div>
+                    <div class="card-text" style="font-size:0.72rem;">
+                        Le <strong>load shedding</strong> (charge non satisfaite quand le grid est déconnecté) n'est pas pénalisé dans cette version du score. C'est la prochaine amélioration.
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- ==================== SLIDE: AUTORESEARCH RESULTS ==================== -->
         <div class="slide">
             <div class="content-full">
@@ -3018,7 +2764,7 @@
                                     <tr><th>Métrique</th><th>Prattico (baseline)</th><th>AutoResearch (S6)</th><th>Delta</th></tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>Score global</td><td>533.98</td><td style="color:var(--accent-green);font-weight:700;">708.55</td><td style="color:var(--accent-green);font-weight:700;">+32.7%</td></tr>
+                                    <tr><td>Score global</td><td>533.98</td><td style="color:var(--accent-green);font-weight:700;">708.55</td><td style="color:var(--accent-green);font-weight:700;">+32.7% *</td></tr>
                                     <tr><td>&Delta;V<sub>DC</sub> max</td><td>1.68%</td><td>1.39%</td><td style="color:var(--accent-green);">-17%</td></tr>
                                     <tr><td>SOC in range</td><td>100%</td><td>100%</td><td>=</td></tr>
                                     <tr><td>Coût journalier</td><td>82.33&euro;</td><td style="color:var(--accent-green);font-weight:700;">0.26&euro;</td><td style="color:var(--accent-green);font-weight:700;">-99.7%</td></tr>
@@ -3033,6 +2779,19 @@
                                 Profils : Reggio Calabria, 15 Juin (PVGIS). 24h simulées en 33s.
                                 Évaluation FIS-in-the-loop : le FIS contrôle batterie, grid et FC à chaque pas de temps.
                                 10 scénarios testés, 40+ expériences, traçabilité CSV complète.
+                            </div>
+                        </div>
+                        <div class="warning-box mt-1" style="border:2px solid var(--accent-orange);">
+                            <div class="warning-box-title">* Nuance importante sur le +32.7%</div>
+                            <div class="card-text" style="font-size:0.68rem;">
+                                <strong>Le gain +32.7% vient principalement du passage en Island Mode</strong>
+                                (grid OFF &rarr; co&ucirc;t -99.7%). C'est un <strong>changement de mode
+                                op&eacute;ratoire</strong>, pas un simple tuning incr&eacute;mental.<br>
+                                <strong>Limites :</strong> le load shedding n'est pas p&eacute;nalis&eacute;
+                                dans le score actuel. Une m&eacute;trique de satisfaction de charge est
+                                n&eacute;cessaire pour une comparaison &eacute;quitable.<br>
+                                <strong>Comparaison conservatrice (grid-connected) :</strong>
+                                +1.5% (542.19 vs 533.98) &mdash; gain &agrave; mode op&eacute;ratoire identique.
                             </div>
                         </div>
                     </div>
@@ -3055,9 +2814,12 @@
                             <div class="success-box-title">Ce que cela signifie</div>
                             <div class="card-text" style="font-size:0.72rem;">
                                 Un agent IA (Claude Opus 4.6) a découvert en <strong>40 expériences automatisées</strong>
-                                une stratégie EMS qui surpasse le design expert de +32.7% &mdash;
-                                tout en maintenant <strong>zéro violation de sécurité IEEE 1547</strong>.
-                                Le microgrid opère en quasi-autonomie avec un coût d'import de 0.26&euro;/jour.
+                                une stratégie EMS atteignant un score de 708.55 (+32.7%) &mdash;
+                                tout en maintenant <strong>zéro violation de sécurité IEEE 1547</strong>.<br>
+                                <span style="color:var(--accent-orange);"><strong>Nuance :</strong></span>
+                                ce gain provient d'un <strong>changement de mode op&eacute;ratoire</strong> (Island Mode,
+                                grid OFF). En restant grid-connected, le gain est de <strong>+1.5% (542.19)</strong>,
+                                ce qui constitue la revendication conservatrice et &eacute;quitable.
                             </div>
                         </div>
                     </div>
@@ -3079,12 +2841,26 @@
                     <tbody>
                         <tr><td>0</td><td>Prattico original</td><td>533.98</td><td>&mdash;</td><td>Configuration expert humain (60 règles Mamdani, Table 3)</td></tr>
                         <tr><td>1</td><td>Rule fix</td><td>534.90</td><td style="color:var(--accent-green);">+0.2%</td><td>DefL+LowSOC : Discharge &rarr; Idle (préserve batterie basse)</td></tr>
-                        <tr><td>2</td><td>MF reshape</td><td>542.19</td><td style="color:var(--accent-green);">+1.5%</td><td>Discharge MF : [0,100,100] &rarr; [0,50,100] (décharge modérée)</td></tr>
-                        <tr style="background:#f0fdf4;"><td>3</td><td><strong>Island Mode</strong></td><td><strong>695.37</strong></td><td style="color:var(--accent-green);font-weight:700;">+30.2%</td><td>Grid déconnecté + FC ON en déficit + 15 règles modifiées</td></tr>
+                        <tr style="background:#fffbeb;"><td>2</td><td>MF reshape</td><td><strong>542.19</strong></td><td style="color:var(--accent-green);font-weight:700;">+1.5%</td><td>Discharge MF : [0,100,100] &rarr; [0,50,100] (d&eacute;charge mod&eacute;r&eacute;e)</td></tr>
+                        <tr style="background:#fffbeb;"><td colspan="5" style="font-size:0.62rem; color:var(--accent-orange); text-align:center; padding:0.2rem; font-style:italic;">&#9650; Grid-connected : comparaison &eacute;quitable (+1.5%) &mdash; m&ecirc;me mode op&eacute;ratoire que Prattico &#9650;</td></tr>
+                        <tr style="background:#fff7ed;"><td colspan="5" style="font-size:0.62rem; color:#b45309; text-align:center; padding:0.2rem; font-weight:600;">&#9660; Island Mode ci-dessous : changement de mode op&eacute;ratoire (grid OFF) &mdash; comparaison non &eacute;quitable &#9660;</td></tr>
+                        <tr style="background:#f0fdf4;"><td>3</td><td><strong>Island Mode</strong></td><td><strong>695.37</strong></td><td style="color:var(--accent-green);font-weight:700;">+30.2%</td><td>Grid d&eacute;connect&eacute; + FC ON en d&eacute;ficit + 15 r&egrave;gles modifi&eacute;es</td></tr>
                         <tr><td>4</td><td>Grid enforced</td><td>701.55</td><td style="color:var(--accent-green);">+31.4%</td><td>Bug fix : Grid_conn FIS output effectivement utilisé dans l'évaluation</td></tr>
                         <tr style="background:#ecfdf5;"><td><strong>5</strong></td><td><strong>S6 Final</strong></td><td style="font-weight:900;color:var(--accent-green);">708.55</td><td style="color:var(--accent-green);font-weight:900;">+32.7%</td><td>Ultra-Charge [-100,-100,-80] + Grid OFF sauf urgence + FC ON</td></tr>
                     </tbody>
                 </table>
+                <div class="warning-box mt-1" style="border:2px solid var(--accent-orange);">
+                    <div class="warning-box-title">Deux niveaux de revendication</div>
+                    <div class="card-text" style="font-size:0.68rem;">
+                        <strong style="color:var(--accent-green);">Conservatrice (recommand&eacute;e) :</strong>
+                        +1.5% (542.19 vs 533.98) &mdash; am&eacute;lioration en mode grid-connected, comparaison &eacute;quitable avec Prattico.
+                        M&ecirc;me mode op&eacute;ratoire, m&ecirc;mes contraintes.<br>
+                        <strong style="color:var(--accent-orange);">Optimiste (avec r&eacute;serves) :</strong>
+                        +32.7% (708.55 vs 533.98) &mdash; inclut le passage en Island Mode. Le gain vient
+                        principalement de la suppression du co&ucirc;t grid (-99.7%), pas d'un meilleur EMS.
+                        Le load shedding n'est pas p&eacute;nalis&eacute; dans le score, ce qui biaise la comparaison.
+                    </div>
+                </div>
                 <div class="grid-2 mt-1">
                     <div class="info-box">
                         <div class="info-box-title">Méthodologie AutoResearch</div>
@@ -3103,6 +2879,54 @@
                             hypothèse en langage naturel, fichier modifié, 5 métriques, score, décision
                             (accepté/rejeté), durée, erreur.<br>
                             Code source : <a href="https://github.com/akiroussama/phd_microgrid" target="_blank">github.com/akiroussama/phd_microgrid</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SLIDE: NEXT STEPS ==================== -->
+        <div class="slide">
+            <div class="content-full">
+                <div class="slide-header">
+                    <span class="section-badge" style="background:var(--accent-blue); color:white;">NEXT</span>
+                    <h2 class="slide-title">Prochaines étapes</h2>
+                </div>
+                <div class="grid-2" style="gap:1.2rem;">
+                    <div>
+                        <div class="card" style="border-left:4px solid var(--accent-green); padding:0.8rem; margin-bottom:0.8rem;">
+                            <div class="card-title" style="color:var(--accent-green);">Semaine 1 (25-31 Mars)</div>
+                            <ul style="font-size:0.75rem; line-height:1.9; margin:0; padding-left:1.2rem;">
+                                <li>Ajouter pénalité <strong>load shedding</strong> au score</li>
+                                <li>Relancer campagne AutoResearch avec score corrigé</li>
+                                <li>Comparer avec <strong>GA-FIS</strong> et <strong>random search</strong></li>
+                            </ul>
+                        </div>
+                        <div class="card" style="border-left:4px solid var(--accent-orange); padding:0.8rem;">
+                            <div class="card-title" style="color:var(--accent-orange);">Semaine 2-3 (Avril)</div>
+                            <ul style="font-size:0.75rem; line-height:1.9; margin:0; padding-left:1.2rem;">
+                                <li>Campagne <strong>500 expériences</strong></li>
+                                <li>Validation croisée : <strong>Décembre</strong>, jours nuageux</li>
+                                <li>Draft paper <strong>Energies MDPI</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card" style="border-left:4px solid var(--accent-purple); padding:0.8rem; margin-bottom:0.8rem;">
+                            <div class="card-title" style="color:var(--accent-purple);">Améliorations modèle</div>
+                            <ul style="font-size:0.75rem; line-height:1.9; margin:0; padding-left:1.2rem;">
+                                <li>Implémenter <strong>MPPT P&amp;O</strong> (PV 59 kW &rarr; 150 kWp)</li>
+                                <li>FIS dans Simscape physique (pas seulement fullday)</li>
+                                <li>Validation HIL sur <strong>Speedgoat</strong></li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <div class="info-box-title">Ce dont j'ai besoin aujourd'hui</div>
+                            <div class="card-text" style="font-size:0.78rem; line-height:1.8;">
+                                <strong>1.</strong> Validation de la direction AutoResearch<br>
+                                <strong>2.</strong> Avis sur le journal cible<br>
+                                <strong>3.</strong> Retour sur la formule du score
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -3129,11 +2953,12 @@
                             Comparaison 2003 vs 2018, catégories I/II/III, justification Cat II pour Prattico.
                         </div>
                     </div>
-                    <div class="card" style="border-left: 4px solid var(--accent-green);">
-                        <div class="card-title"><span class="status-pass">[OK]</span> AutoResearch : +32.7%</div>
+                    <div class="card" style="border-left: 4px solid var(--accent-orange);">
+                        <div class="card-title"><span class="status-pass">[OK]</span> AutoResearch : +1.5% &agrave; +32.7%</div>
                         <div class="card-text">
-                            40 expériences autonomes. Score : 708.55 vs 533.98 baseline.
-                            Coût : -99.7%. Zéro violation. Island Mode découvert par l'IA.
+                            40 exp&eacute;riences autonomes. Grid-connected : +1.5% (542.19).
+                            Island Mode : +32.7% (708.55) &mdash; changement de mode op&eacute;ratoire,
+                            comparaison non &eacute;quitable sans m&eacute;trique de load satisfaction.
                         </div>
                     </div>
                 </div>
@@ -3141,7 +2966,12 @@
                     <div class="success-box-title" style="text-align:center; font-size:1rem;">Principe directeur</div>
                     <div class="card-text"
                         style="text-align:center; font-size:1rem; font-weight:600; color:var(--phd-primary);">
-                        "Reproduire d'abord, innover ensuite." &mdash; Résultat : +32.7% vs expert humain.
+                        "Reproduire d'abord, innover ensuite."
+                    </div>
+                    <div class="card-text"
+                        style="text-align:center; font-size:0.8rem; color:var(--text-secondary); margin-top:0.3rem;">
+                        R&eacute;sultat conservateur : +1.5% en grid-connected (542.19 vs 533.98)<br>
+                        R&eacute;sultat optimiste : +32.7% en Island Mode (708.55) &mdash; mode op&eacute;ratoire diff&eacute;rent
                     </div>
                 </div>
                 <div style="margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.85rem;">
