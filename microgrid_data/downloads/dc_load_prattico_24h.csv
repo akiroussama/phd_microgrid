@@ -1,0 +1,25 @@
+Hour,P_kW,Description
+0,1.5,Night base
+1,1.5,Night base
+2,1.5,Night base
+3,1.5,Night base
+4,1.5,Night base
+5,1.5,Night base
+6,1.5,Night base
+7,1.5,Night base
+8,6.0,Morning ramp
+9,12.0,Daytime
+10,12.0,Daytime
+11,12.0,Daytime
+12,12.0,Daytime
+13,12.0,Daytime
+14,15.0,Peak
+15,12.0,Afternoon
+16,12.0,Afternoon
+17,10.0,Late afternoon
+18,8.0,Evening transition
+19,6.0,Evening
+20,3.0,Night transition
+21,1.5,Night base
+22,1.5,Night base
+23,1.5,Night base

@@ -1,0 +1,25 @@
+Hour,P_kW,Description
+0,10,Night base load
+1,10,Night base load
+2,10,Night base load
+3,10,Night base load
+4,10,Night base load
+5,10,Night base load
+6,10,Night base load
+7,10,Morning start
+8,15,Morning ramp
+9,20,Morning activities
+10,25,Late morning
+11,35,Pre-lunch peak
+12,40,Midday peak
+13,40,Midday peak
+14,35,Afternoon
+15,30,Afternoon
+16,25,Late afternoon
+17,20,Pre-evening
+18,20,Transition
+19,40,Evening ramp
+20,50,Evening peak
+21,50,Evening peak
+22,45,Late evening
+23,30,Night transition
